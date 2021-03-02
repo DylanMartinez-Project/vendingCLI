@@ -1,3 +1,7 @@
 Laptop Setup:
 https://techelevator.zoom.us/rec/share/9NxQCmQLW50ZFHaW_xD2z-tqfIxoWI92tgmvS42OtecUA5_gC2nkyVSrPdvRrrjl.fo7ocwLtIo8Bh3Hi 
 Passcode: 7@4&$wu?
+
+1-1 Command Line Shell and Git:
+https://techelevator.zoom.us/rec/share/YKVBDepe-aoP3VTjzxdbV-r7FCmOSCPZ_7wvoxrL12d7Y4b5WtZz_gzGvxbVHSyg.siq3JONapQZ4AgCf 
+Passcode: #8j5LMK
