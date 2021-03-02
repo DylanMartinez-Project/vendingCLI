@@ -35,6 +35,11 @@ public class Exercises {
         4. There are 5 flowers and 3 bees. How many less bees than flowers?
         */
 
+		int flowers = 5;
+		int bees = 3;
+		int difference = flowers - bees;
+
+
 
         /* Exercise 5
         5. 1 lonely pigeon was eating breadcrumbs. Another pigeon came to eat
