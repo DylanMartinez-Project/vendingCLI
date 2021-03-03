@@ -142,10 +142,10 @@ public class Exercises {
         15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2 on a pencil
         case. How much money does she have left?
         */
-		int hiltMoney = 10;
-		int toyTruck = 3;
-		int toyPencil = 2;
-		int moneyLeftOver = hiltMoney - (toyTruck + toyPencil);
+		double hiltMoney = 10.00;
+		double toyTruck = 3.00;
+		double toyPencil = 2.00;
+		double moneyLeftOver = hiltMoney - (toyTruck + toyPencil);
 
 
         /* Exercise 16
@@ -219,6 +219,10 @@ public class Exercises {
         she have left?
         */
 
+		int currMarble = 38;
+		int lossMarble = 15;
+		int nowMarble = currMarble - lossMarble;
+
 
 
 
@@ -227,24 +231,38 @@ public class Exercises {
         miles and then stopped for gas. How many miles did they have left to drive?
         */
 
+		int milesDriven = 78;
+		int milesCurrent = 32;
+		int milesLeft = milesDriven - milesCurrent;
+
 
         /* Exercise 25
         25. Mrs. Hilt spent 1 hour and 30 minutes shoveling snow on Saturday
         morning and 45 minutes shoveling snow on Saturday afternoon. How
         much total time (in minutes) did she spend shoveling snow?
         */
+		int snowTime = 90;
+		int snowTimeTwo = 45;
+		int snowTimeFinal = snowTime + snowTimeTwo;
 
 
         /* Exercise 26
         26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
         money did she pay for all of the hot dogs?
         */
+		double hotdog = 6;
+		double hotdogPrice = 0.5;
+		double hotdogBill = hotdog * hotdogPrice;
+
 
 
         /* Exercise 27
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
+		int hiltWallet = 50;
+		int pencilCost =  7;
+		int pencilQual = hiltWallet / pencilCost;
 
 
         /* Exercise 28
@@ -252,6 +270,9 @@ public class Exercises {
         were orange. If 20 of the butterflies were orange, how many of them
         were red?
         */
+		int butterSaw = 33;
+		int butterOrange = 20;
+		int butterRed = butterSaw - butterOrange;
 
 
         /* Exercise 29
@@ -259,35 +280,56 @@ public class Exercises {
         should Kate get back?
         */
 
+		double moneyGiven = 1.00;
+		double candyCost = .54;
+		double cashBack = moneyGiven - candyCost ;
+
 
         /* Exercise 30
         30. Mark has 13 trees in his backyard. If he plants 12 more, how many trees
         will he have?
         */
 
+		int treeMark = 13 ;
+		int treePlant = 12;
+		int plantNow = treeMark + treePlant;
+
 
         /* Exercise 31
         31. Joy will see her grandma in two days. How many hours until she sees
         her?
         */
+		int dayHours = 24;
+		int daysLeft = 2;
+		int hoursLeft = dayHours * daysLeft;
 
 
         /* Exercise 32
         32. Kim has 4 cousins. She wants to give each one 5 pieces of gum. How
         much gum will she need?
         */
+		int cousinNum = 4;
+		int gumNum = 5;
+		int gumGiven = cousinNum * gumNum;
 
 
         /* Exercise 33
         33. Dan has $3.00. He bought a candy bar for $1.00. How much money is
         left?
         */
+		double danWallet = 3.00;
+		double candyBar = 1.00;
+		double cashLeft = danWallet - candyBar;
 
 
         /* Exercise 34
         34. 5 boats are in the lake. Each boat has 3 people. How many people are
         on boats in the lake?
         */
+		int boatLake = 5;
+		int boatPeople = 3;
+		int boatTotal = boatLake * boatPeople;
+
 
 
         /* Exercise 35
@@ -295,11 +337,18 @@ public class Exercises {
         have now?
         */
 
+		int legoTotal = 380;
+		int legoLost = 57;
+		int legoLeft = legoTotal - legoLost;
+
 
         /* Exercise 36
         36. Arthur baked 35 muffins. How many more muffins does Arthur have to
         bake to have 83 muffins?
         */
+		int muffinBaked = 35;
+		int muffinGoal = 83;
+		int muffinLeft = muffinGoal - muffinBaked;
 
 
         /* Exercise 37
@@ -307,11 +356,18 @@ public class Exercises {
         crayons does Willy have then Lucy?
         */
 
+		int willyCrayon = 1400;
+		int lucyCrayon = 290;
+		int willyMore = willyCrayon - lucyCrayon;
 
         /* Exercise 38
         38. There are 10 stickers on a page. If you have 22 pages of stickers, how
         many stickers do you have?
         */
+
+		int stickerPage = 10;
+		int pageNumber = 22;
+		int stickerTotal = stickerPage * pageNumber;
 
 
         /* Exercise 39
@@ -319,12 +375,19 @@ public class Exercises {
         person get if they share the cupcakes equally?
         */
 
+		double cupcakeTotal = 96.0;
+		double childrenNumber = 8.0;
+		double cupPerson = cupcakeTotal /childrenNumber;
+
 
         /* Exercise 40
         40. She made 47 gingerbread cookies which she will distribute equally in
         tiny glass jars. If each jar is to contain six cookies each, how many
         cookies will not be placed in a jar?
         */
+		int cookie =47;
+		int jarCookie = 6;
+		int leftOver = cookie%jarCookie;
 
 
         /* Exercise 41
@@ -333,12 +396,19 @@ public class Exercises {
         how many will be left with Marian?
         */
 
+		int cross = 59;
+		int neighbor = 8;
+		int crossLeft = cross%neighbor;
+
 
         /* Exercise 42
         42. Marian also baked oatmeal cookies for her classmates. If she can
         place 12 cookies on a tray at a time, how many trays will she need to
         prepare 276 oatmeal cookies at a time?
         */
+		int cookieTray = 12;
+		int oatCook = 276;
+		int trayCook = oatCook/cookieTray;
 
 
         /* Exercise 43
@@ -347,12 +417,19 @@ public class Exercises {
         servings of bite-sized pretzels was Marian able to prepare?
         */
 
+		int pretBite = 480;
+		int pretReal = 12;
+		int realPret = pretBite/pretReal;
+
 
         /* Exercise 44
         44. Lastly, she baked 53 lemon cupcakes for the children living in the city
         orphanage. If two lemon cupcakes were left at home, how many
         boxes with 3 lemon cupcakes each were given away?
         */
+		int lemonCup = 51;
+		int boxThree = 3;
+		int boxesTotal = lemonCup/boxThree;
 
 
         /* Exercise 45
@@ -360,6 +437,9 @@ public class Exercises {
         were served equally to 12 people, how many carrot sticks were left
         uneaten?
         */
+		int momCarrot = 74;
+		int peopleTwelve = 12;
+		int leftOverCarrot = momCarrot%peopleTwelve;
 
 
         /* Exercise 46
@@ -368,12 +448,20 @@ public class Exercises {
         maximum of 7 teddy bears, how many shelves will be filled?
         */
 
+		int susieBear = 98;
+		int shelfSpace = 7;
+		int filledShelf = susieBear/shelfSpace;
+
 
         /* Exercise 47
         47. Susie’s mother collected all family pictures and wanted to place all of
         them in an album. If an album can contain 20 pictures, how many
         albums will she need if there are 480 pictures?
         */
+
+		int famPix = 480;
+		int albumSpace = 20;
+		int albumNeed = famPix/albumSpace;
 
 
         /* Exercise 48
@@ -382,6 +470,10 @@ public class Exercises {
         cards, how many boxes were filled and how many cards are there in
         the unfilled box?
         */
+		int tradeCard = 94;
+		int boxMax = 8;
+		int boxFilled = tradeCard/boxMax;
+		int boxRemain = tradeCard%boxMax;
 
 
         /* Exercise 49
@@ -389,12 +481,18 @@ public class Exercises {
         210 books to be distributed equally on the 10 shelves he repaired,
         how many books will each shelf contain?
         */
+		int bookFather = 210;
+		int shelfDad = 10;
+		int bookShelfTwo = bookFather/shelfDad;
 
 
         /* Exercise 50
         50. Cristina baked 17 croissants. If she planned to serve this equally to
         her seven guests, how many will each have?
         */
+		double crossBread = 17;
+		double guestNumber = 7;
+		double guestBread = crossBread/guestNumber;
 
 
 	    /* Exercise 51
@@ -402,6 +500,16 @@ public class Exercises {
 	    1.90 hours. How long will it take the two painters working together to paint 5 12 x 14 rooms?
 	    Hint: Calculate the hourly rate for each painter, combine them, and then divide the total walls in feet by the combined hourly rate of the painters.
 	    */
+
+		double billAv = (12*14)/2.15;
+		double jillAv = (12*14)/1.90;
+		double bjAve = billAv + jillAv;
+		double bjTotal = (5)*(12*14)/(bjAve) ;
+
+
+
+
+
 
 
 	    /* Exercise 52
@@ -412,11 +520,24 @@ public class Exercises {
 		Example: "John", "Smith, "D" —> "Smith, John D."
 	    */
 
+		String lastName = "Hopper";
+		String firstName = "Grace";
+		String comma = ", ";
+		String middleInt = " B.";
+		String combinedName =  lastName + comma	+ firstName + middleInt;
+		System.out.println(combinedName);
+
+
 
 	    /* Exercise 53
 	    53. The distance between New York and Chicago is 800 miles, and the train has already travelled 537 miles.
 	    What percentage of the trip as a whole number has been completed?
 	    */
+		double tripTrav = 537.0;
+		double tripTot = 800.0;
+		double tripFra = tripTrav/tripTot;
+		int tripFin = (int) (tripFra * 100);
+
 
 	}
 

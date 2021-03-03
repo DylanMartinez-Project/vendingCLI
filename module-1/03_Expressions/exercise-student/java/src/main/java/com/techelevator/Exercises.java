@@ -10,7 +10,15 @@ public class Exercises {
 	 sleepIn(false, true) → true
 	 */
 	public boolean sleepIn(boolean weekday, boolean vacation) {
-		return false;
+
+		boolean canISleepIn = false;
+
+
+		if (!weekday || vacation) {
+			canISleepIn = true;
+		}
+
+		return canISleepIn;
 	}
 
 	/*
@@ -22,6 +30,14 @@ public class Exercises {
 	 monkeyTrouble(true, false) → false
 	 */
 	public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
+
+		boolean bothSmiling = aSmile == true && bSmile == true;
+		boolean neitherSmiling = aSmile == false && bSmile == false;
+
+		if (bothSmiling == true || neitherSmiling == true) {
+			return true;
+		}
+
 		return false;
 	}
 
@@ -57,6 +73,13 @@ public class Exercises {
 	 parrotTrouble(false, 6) → false
 	 */
 	public boolean parrotTrouble(boolean talking, int hour) {
+
+		boolean inRange = hour < 7 || hour > 20;
+
+		if (inRange== true && talking == true){
+			return true;
+		}
+
 		return false;
 	}
 

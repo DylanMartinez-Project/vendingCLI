@@ -6,7 +6,10 @@ public class Lecture {
     it so that it returns something other than a 1.
     */
     public int returnNotOne() {
-        return 1;
+
+        int returnValue = 2;
+
+        return returnValue;
     }
 
     /*
@@ -14,29 +17,30 @@ public class Lecture {
     it so that it returns something other than a 0.5.
     */
     public double returnNotHalf() {
-        return 0.5;
+        return 0.6;
     }
 
     /*
     3. This method needs to return a String. Fix it to return a valid String.
     */
     public String returnName() {
-        return null;
+        return "Dylan";
     }
 
     /*
     4. This method currently returns an int. Change it so that it returns a double.
     */
-    public int returnDoubleOfTwo() {
-        return 2;
+    public double returnDoubleOfTwo() {
+
+        return 2.0;
     }
 
     /*
     5. This method should return the language that you're learning. Change
     it so that it does that.
     */
-    public boolean returnNameOfLanguage() {
-        return false;
+    public String returnNameOfLanguage() {
+        return "Java";
     }
 
     /*
@@ -44,11 +48,14 @@ public class Lecture {
     return true if the if statement passes.
     */
     public boolean returnTrueFromIf() {
-        if (true) {
-            return false;
+
+        boolean returnValue = false;
+
+        if (1==1) {
+            returnValue = true;
         }
 
-        return false;
+        return returnValue;
     }
 
     /*
@@ -57,7 +64,7 @@ public class Lecture {
     */
     public boolean returnTrueWhenOneEqualsOne() {
         if (1 == 1) {
-            return false;
+            return true;
         }
 
         return false;
@@ -68,15 +75,17 @@ public class Lecture {
     greater than 5 and returns true if it is.
     */
     public boolean returnTrueWhenGreaterThanFive(int number) {
+
+
         if (number > 5) {
-
+            return true;
         } else {
-
+            return false;
         }
-        return false;
     }
 
     /*
+
     9. If you think about it, we really don't need the if statement above.
     How can we rewrite exercise 8 to have only one line of code?
     */
@@ -85,6 +94,9 @@ public class Lecture {
     }
 
     /*
+
+
+
     10. This method will take a number and do the following things to it:
     * If addThree is true, we'll add three to that number
     * If addFive is true, we'll add five to that number
@@ -92,13 +104,13 @@ public class Lecture {
     */
     public int returnNumberAfterAddThreeAndAddFive(int number, boolean addThree, boolean addFive) {
         if (addThree) {
-            number = number + 1;
+            number = number + 3;
         }
 
         // We can't use an else here. They could both be true, so we have to check each one.
 
         if (addFive) {
-            number += 1;
+            number += 5;
         }
 
         return number;
