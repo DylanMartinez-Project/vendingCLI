@@ -254,7 +254,7 @@ public class Exercises {
 	 */
 	public boolean in3050(int a, int b) {
 
-//		
+//
 
 
 
@@ -269,8 +269,21 @@ public class Exercises {
 	 max1020(11, 9) → 11
 	 */
 	public int max1020(int a, int b) {
-		return 0;
-	}
+		boolean aRange = a >= 10 && a <= 20;
+		boolean bRange = b >= 10 && b <= 20;
+		if (aRange == true && bRange == true)
+			if (a > b) return a;
+			else return b;
+			if (aRange == true && bRange == false) {
+				return a;
+			}
+			if (aRange == false && bRange == true) {
+				return b;
+			}
+
+			return 0;
+		}
+
 
 	/*
 	 16. When squirrels get together for a party, they like to have cigars. A squirrel party is successful
@@ -282,6 +295,14 @@ public class Exercises {
 	 cigarParty(70, true) → true
 	 */
 	public boolean cigarParty(int cigars, boolean isWeekend) {
+		if (cigars >= 40 && cigars <=60)
+			return true;
+			if (cigars >= 40 && isWeekend)
+				return true;
+			if (cigars < 40)
+				return false;
+
+
 		return false;
 	}
 
@@ -297,6 +318,20 @@ public class Exercises {
 	 dateFashion(5, 5) → 1
 	 */
 	public int dateFashion(int you, int date) {
+		if ( you <= 2 || date <=2)
+			return 0;
+		if (you >=8 && you <= 10)
+			return 2;
+		if (date >=8 && date <= 10)
+			return 2;
+		if ( you >= 3 && you <= 7)
+			return 1;
+		if ( date >= 3 && date <= 7)
+			return 1;
+
+
+
+
 		return 0;
 	}
 
@@ -333,7 +368,28 @@ public class Exercises {
      yourCakeAndEatItToo(11.00, false) → "special"
      */
     public String yourCakeAndEatItToo(double mealAmount, boolean isBirthday) {
-        return "";
+
+    	if ( mealAmount > 15)
+    		return "ginormous";
+		if ( mealAmount > 10 && isBirthday)
+			return "ginormous";
+		if (mealAmount >= 10 && mealAmount <15 && !isBirthday)
+			return "special";
+
+    	if ( mealAmount >= 10 && mealAmount <15 && !isBirthday)
+    		return "standard";
+
+    	if ( mealAmount >= 11 && mealAmount <= 14)
+    		return" special";
+    	if (mealAmount <= 9.9 && mealAmount >= 5 && isBirthday)
+    		return "special";
+		if (mealAmount < 5 && isBirthday)
+			return "standard";
+		if (mealAmount < 5 && !isBirthday)
+			return "standard";
+
+
+        return "standard";
     }
 
 	/*
