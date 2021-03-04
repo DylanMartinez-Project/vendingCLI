@@ -51,6 +51,11 @@ public class Exercises {
 		return 0;
 	}
 
+
+
+
+
+
 	/*
 	 4. Given an int n, return the absolute difference between n and 21, except return double the absolute
 	 difference if n is over 21.
@@ -60,6 +65,7 @@ public class Exercises {
 	 diff21(22) → 2
 	 diff21(-10) → 31
 	 */
+
 	public int diff21(int n) {
 		return 0;
 	}
@@ -90,6 +96,9 @@ public class Exercises {
 	 makes10(1, 9) → true
 	 */
 	public boolean makes10(int a, int b) {
+		if ( a == 10 ||b == 10|| a + b == 10){
+			return true;
+		}
 		return false;
 	}
 
@@ -100,9 +109,22 @@ public class Exercises {
 	 posNeg(-1, 1, false) → true
 	 posNeg(-4, -5, true) → true
 	 */
+
+
 	public boolean posNeg(int a, int b, boolean negative) {
+		if ( a < 0 || b < 0 ){
+			return true;
+		}
+		 if (a < 0 && b < 0 && negative == true) {
+			return true;
+		}
+
+
 		return false;
 	}
+
+
+
 
 	/*
 	 8. Return true if the given non-negative number is a multiple of 3 or a multiple of 5.
@@ -111,7 +133,11 @@ public class Exercises {
 	 or35(10) → true
 	 or35(8) → false
 	 */
+
 	public boolean or35(int n) {
+		if ( n%3 == 0 || n%5 == 0){
+			return true;
+		}
 		return false;
 	}
 
@@ -122,6 +148,19 @@ public class Exercises {
 	 icyHot(2, 120) → false
 	 */
 	public boolean icyHot(int temp1, int temp2) {
+//		if ( temp1 < 0 || temp1 > 100){
+//			return true;
+//		}
+//		if ( temp2 < 0 || temp2 >100){
+//			return true;
+//		}
+//		if (temp1 > 0 && < 100){
+//
+//		}
+
+
+
+
 		return false;
 	}
 
@@ -132,6 +171,12 @@ public class Exercises {
 	 in1020(8, 99) → false
 	 */
 	public boolean in1020(int a, int b) {
+		if ( a >= 10 && a <= 20){
+			return true;
+		}
+		if (b >= 10 && b <= 20){
+			return true;
+		}
 		return false;
 	}
 
@@ -143,6 +188,18 @@ public class Exercises {
 	 hasTeen(20, 10, 13) → true
 	 */
 	public boolean hasTeen(int a, int b, int c) {
+
+		if ( a >= 13 && a <= 19){
+			return true;
+		}
+		if (b >= 13 && b <= 19) {
+			return true;
+		}
+		if (c >= 13 && c <= 19) {
+			return true;
+		}
+
+
 		return false;
 	}
 
@@ -154,6 +211,18 @@ public class Exercises {
 	 loneTeen(13, 13) → false
 	 */
 	public boolean loneTeen(int a, int b) {
+//		if ( a >= 13 && a <= 19){
+//			return true;
+//		}
+//		if (b >= 13 && b <= 19) {
+//			return true;
+//		}
+//		if( loneTeen)(true,b:true)){
+//			return false;
+//		}
+
+
+
 		return false;
 	}
 
@@ -164,6 +233,15 @@ public class Exercises {
 	 intMax(3, 2, 1) → 3
 	 */
 	public int intMax(int a, int b, int c) {
+		if (a >= b && a >= c ) {
+			return a;
+		}
+		else if (b >= a && b >= c){
+			return b;
+		}
+		else if (c >= a && c >= b){
+			return c;
+		}
 		return 0;
 	}
 
@@ -175,6 +253,11 @@ public class Exercises {
 	 in3050(40, 50) → true
 	 */
 	public boolean in3050(int a, int b) {
+
+//		
+
+
+
 		return false;
 	}
 
