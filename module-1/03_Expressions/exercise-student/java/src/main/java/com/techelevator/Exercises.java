@@ -48,6 +48,15 @@ public class Exercises {
 	 sumDouble(2, 2) → 8
 	 */
 	public int sumDouble(int a, int b) {
+		if (a > b){
+			return a + b;
+		}
+		if (b >a){
+			return a +b;
+		}
+		if (a == b)
+			return (a + b) * 2;
+
 		return 0;
 	}
 
@@ -67,6 +76,14 @@ public class Exercises {
 	 */
 
 	public int diff21(int n) {
+		if ( n < 21){
+			return Math.abs( n - 21);
+		}
+		if (n> 21){
+			return Math.abs (n- 21)*2;
+		}
+
+
 		return 0;
 	}
 
@@ -112,17 +129,18 @@ public class Exercises {
 
 
 	public boolean posNeg(int a, int b, boolean negative) {
-		if ( a < 0 || b < 0 ){
-			return true;
-		}
-		 if (a < 0 && b < 0 && negative == true) {
-			return true;
-		}
+		if (negative) {
+			if (a < 0 && b < 0) {
+				return true;
+			}
+		} else {
 
-
+			if ((a > 0 && b < 0) || (a < 0 && b > 0)) {
+				return true;
+			}
+		}
 		return false;
 	}
-
 
 
 
@@ -147,22 +165,20 @@ public class Exercises {
 	 icyHot(-1, 120) → true
 	 icyHot(2, 120) → false
 	 */
+
 	public boolean icyHot(int temp1, int temp2) {
-//		if ( temp1 < 0 || temp1 > 100){
-//			return true;
-//		}
-//		if ( temp2 < 0 || temp2 >100){
-//			return true;
-//		}
-//		if (temp1 > 0 && < 100){
-//
-//		}
+		if ( temp1 < 0 && temp2 > 100){
+			return true;
+		}
+		if ( temp2< 0 && temp1 >100){
+			return true;
+		}
+
+			return false;
 
 
-
-
-		return false;
 	}
+
 
 	/*
 	 10. Given 2 int values, return true if either of them is in the range 10..20 inclusive.
@@ -211,15 +227,9 @@ public class Exercises {
 	 loneTeen(13, 13) → false
 	 */
 	public boolean loneTeen(int a, int b) {
-//		if ( a >= 13 && a <= 19){
-//			return true;
-//		}
-//		if (b >= 13 && b <= 19) {
-//			return true;
-//		}
-//		if( loneTeen)(true,b:true)){
-//			return false;
-//		}
+		if(a>=13 && a <=19 && b<13 ^ b > 19 || b>=13 && b <=19 && a<13 ^ a > 19){
+			return true;
+		}
 
 
 
@@ -253,8 +263,11 @@ public class Exercises {
 	 in3050(40, 50) → true
 	 */
 	public boolean in3050(int a, int b) {
+		if(a>=30 && a<= 40 && b>=30 && b<= 40 || a>=40 && a<= 50 &&  b>=40 && b<= 50){
+			return true;
+		}
 
-//
+
 
 
 
@@ -344,6 +357,12 @@ public class Exercises {
 	 squirrelPlay(95, true) → true
 	 */
 	public boolean squirrelPlay(int temp, boolean isSummer) {
+
+		if(temp >= 60 && temp <= 90 && !isSummer)
+			return true;
+		if(temp >= 60 && temp <= 100 && isSummer) {
+			return true;
+		}
 		return false;
 	}
 
@@ -368,26 +387,25 @@ public class Exercises {
      yourCakeAndEatItToo(11.00, false) → "special"
      */
     public String yourCakeAndEatItToo(double mealAmount, boolean isBirthday) {
-
-    	if ( mealAmount > 15)
-    		return "ginormous";
-		if ( mealAmount > 10 && isBirthday)
-			return "ginormous";
-		if (mealAmount >= 10 && mealAmount <15 && !isBirthday)
-			return "special";
-
-    	if ( mealAmount >= 10 && mealAmount <15 && !isBirthday)
+		if (mealAmount <= 4.99) {
+			return "standard";
+		}
+    	if (mealAmount<= 10.00 && mealAmount > 5.00  && !isBirthday){
     		return "standard";
-
-    	if ( mealAmount >= 11 && mealAmount <= 14)
-    		return" special";
-    	if (mealAmount <= 9.9 && mealAmount >= 5 && isBirthday)
+		}
+    	if (mealAmount >= 5.00 && mealAmount <= 10.00 && isBirthday){
     		return "special";
-		if (mealAmount < 5 && isBirthday)
-			return "standard";
-		if (mealAmount < 5 && !isBirthday)
-			return "standard";
+		}
 
+    	if (mealAmount <= 15.00 && mealAmount > 10.00 && !isBirthday ){
+    		return "special";
+		}
+    	if (mealAmount > 10.00 && isBirthday){
+    		return "ginormous";
+		}
+    	if(mealAmount > 15.00){
+    		return "ginormous";
+		}
 
         return "standard";
     }
@@ -400,6 +418,12 @@ public class Exercises {
 	 sortaSum(10, 11) → 21
 	 */
 	public int sortaSum(int a, int b) {
+		if ( a + b < 10 ^ a + b >19){
+			return a + b;
+		}
+		if ( a + b >= 10 && a+b <= 19){
+			return 20;
+		}
 		return 0;
 	}
 
@@ -413,6 +437,15 @@ public class Exercises {
 	 alarmClock(0, false) → "10:00"
 	 */
 	public String alarmClock(int day, boolean vacation) {
+		if ( day >= 1 && day <= 5 && !vacation)
+			return "7:00";
+		if ( day >= 1 && day <= 5 && vacation)
+			return "10:00";
+		if (day == 0 && vacation || day == 6 && vacation)
+			return "off";
+		if (day == 0 && !vacation|| day ==6 && !vacation)
+			return "10:00";
+
 		return "";
 	}
 
@@ -424,6 +457,18 @@ public class Exercises {
 	 in1To10(11, true) → true
 	 */
 	public boolean in1To10(int n, boolean outsideMode) {
+		if (n >=1 && n <=10 && !outsideMode ){
+			return true;
+		}
+		if (n <=1 ^ n >=10  && outsideMode){
+			return true;
+		}
+		if (n >=1 && n <=10 && outsideMode){
+			return false;
+		}
+
+
+
 		return false;
 	}
 
@@ -436,7 +481,8 @@ public class Exercises {
 	 specialEleven(24) → false
 	 */
 	public boolean specialEleven(int n) {
-		return false;
+		return (n % 11 == 0 || (n % 11 == 1 && n > 11));
+
 	}
 
 	/*
@@ -447,7 +493,7 @@ public class Exercises {
 	 more20(22) → true
 	 */
 	public boolean more20(int n) {
-		return false;
+		return (n != 0 && ((n - 1 ) % 20 == 0 || (n - 2) % 20 == 0));
 	}
 
 	/*
@@ -458,8 +504,33 @@ public class Exercises {
 	 old35(15) → false
 	 */
 	public boolean old35(int n) {
-		return false;
-	}
+
+		// given number is "n",  n is assumed to be pos
+		// but not both > some kinda of AND OR XOR
+
+		int moduloWhenDividedBy3 = n%3;
+		int moduleWhenDividedBy5 = n%5;
+
+		boolean numberDivisibleBy3 = false;
+		boolean numberDivisibleBy5 = false;
+
+		if (moduloWhenDividedBy3 == 0) {
+			numberDivisibleBy3 = true;
+		}
+
+		if (moduleWhenDividedBy5 == 0) {
+			numberDivisibleBy5 = true;
+		}
+
+		boolean problemResult = false;
+		if (numberDivisibleBy3 ^ numberDivisibleBy5) {
+			problemResult = true;
+		}
+
+		return problemResult;
+
+
+}
 
 	/*
 	 26. Return true if the given non-negative number is 1 or 2 less than a multiple of 20. So for example 38
@@ -470,7 +541,7 @@ public class Exercises {
 	 less20(20) → false
 	 */
 	public boolean less20(int n) {
-		return false;
+		return (n + 1) % 20 == 0 || (n + 2) % 20 == 0;
 	}
 
 	/*
@@ -481,7 +552,7 @@ public class Exercises {
 	 nearTen(19) → true
 	 */
 	public boolean nearTen(int num) {
-		return false;
+		return num % 10 <= 2 || num % 10 >= 8;
 	}
 
 	/*
@@ -492,7 +563,9 @@ public class Exercises {
 	 teenSum(13, 2) → 19
 	 */
 	public int teenSum(int a, int b) {
-		return 0;
+		if ((13 <= a && a <= 19) || (13 <= b && b <= 19))
+			return 19;
+		return a + b;
 	}
 
 	/*
@@ -503,6 +576,16 @@ public class Exercises {
 	 answerCell(true, false, false) → false
 	 */
 	public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+		if (!isMorning && !isAsleep && !isMom){
+			return true;
+		}
+
+		if (isMorning && isMom && !isAsleep){
+			return true;
+		}
+		if (!isMorning && isMom && !isAsleep){
+			return true;
+		}
 		return false;
 	}
 
@@ -516,6 +599,24 @@ public class Exercises {
 	 teaParty(20, 6) → 2
 	 */
 	public int teaParty(int tea, int candy) {
+
+		if (tea < 5 || candy < 5){
+			return 0;
+		}
+		if ( tea >= 2* candy || candy >= 2*tea){
+			return 2;
+		}
+
+
+		if (tea + candy >= 5){
+			return 1;
+		}
+		if (tea >= 2* candy || candy >= 2* tea){
+			return 2;
+		}
+
+
+
 		return 0;
 	}
 
@@ -526,6 +627,18 @@ public class Exercises {
 	 twoAsOne(3, 2, 2) → false
 	 */
 	public boolean twoAsOne(int a, int b, int c) {
+		if(a + b == c ){
+			return true;
+		}
+		if (b + c== a) {
+			return true;
+		}
+		if ( c+a == b){
+			return true;
+		}
+
+
+
 		return false;
 	}
 
@@ -537,7 +650,11 @@ public class Exercises {
 	 inOrder(1, 1, 2, true) → true
 	 */
 	public boolean inOrder(int a, int b, int c, boolean bOk) {
-		return false;
+		if (bOk)
+			return ( c> b);
+			return (b> a && c >b);
+
+
 	}
 
 	/*
@@ -549,7 +666,10 @@ public class Exercises {
 	 inOrderEqual(5, 5, 7, true) → true
 	 */
 	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
-		return false;
+		if (equalOk)
+			return (a <= b && b <= c);
+		return (a < b && b < c);
+
 	}
 
 	/*
@@ -560,6 +680,28 @@ public class Exercises {
 	 loneSum(3, 3, 3) → 0
 	 */
 	public int loneSum(int a, int b, int c) {
+
+		int totalSum = (a +b + c);
+		boolean same1 = (a==c);
+		boolean same2 = (a==b);
+		boolean same3 = (b==c);
+
+		if(!same1 && !same2 && !same3){
+			return totalSum;
+		}
+
+		if(!same1 && !same2 && same3){
+			return a;
+		}
+		if(!same1 && same2 && !same3){
+			return c;
+		}
+		if (same1 && !same2 && !same3){
+			return b;
+		}
+
+
+
 		return 0;
 	}
 
@@ -574,6 +716,33 @@ public class Exercises {
 	 luckySum(13, 13, 3) → 0
 	 */
 	public int luckySum(int a, int b, int c) {
+
+		boolean aIs = (a ==13);
+		boolean bIs = (b == 13);
+		boolean cIs = (c == 13);
+
+		if (!aIs && !bIs && !cIs){
+			return a + b + c;
+		}
+
+		if ( aIs && !bIs && !cIs){
+			return c;
+		}
+		if (!aIs && bIs && !cIs){
+			return a ;
+		}
+		if (!aIs && !bIs && cIs){
+			return a +b;
+		}
+		if (aIs && bIs && cIs){
+			return 0;
+
+
+		}
+
+
+
+
 		return 0;
 	}
 

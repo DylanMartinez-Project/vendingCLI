@@ -10,6 +10,18 @@ public class Exercises {
 	 firstLast6([13, 6, 1, 2, 3]) → false
 	 */
 	public boolean firstLast6(int[] nums) {
+//		boolean firstElementIs6 = nums[0] ==6;
+//		boolean lastElementIs6 = nums[nums.length- 1] == 6;
+//
+//		if(firstElementIs6 == true || lastElementIs6 == true){
+//			return true;
+//		}
+
+		if (nums[0] == 6 || nums[nums.length-1]==6){
+			return true;
+		}
+
+
 		return false;
 	}
 
@@ -21,6 +33,11 @@ public class Exercises {
 	 sameFirstLast([1, 2, 1]) → true
 	 */
 	public boolean sameFirstLast(int[] nums) {
+
+		if (nums.length >= 1 && nums[0] == nums[nums.length-1]) {
+			return true;
+
+		}
 		return false;
 	}
 
@@ -28,8 +45,9 @@ public class Exercises {
 	 3. Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
 	 makePi() → [3, 1, 4]
 	 */
-	public int[] makePi() {
-		return new int[] {};
+		public int[] makePi() {
+			int [] array = {3, 1, 4};
+			return array;
 	}
 
 	/*
@@ -40,6 +58,8 @@ public class Exercises {
 	 commonEnd([1, 2, 3], [1, 3]) → true
 	 */
 	public boolean commonEnd(int[] a, int[] b) {
+
+
 		return false;
 	}
 
@@ -50,7 +70,13 @@ public class Exercises {
 	 sum3([7, 0, 0]) → 7
 	 */
 	public int sum3(int[] nums) {
-		return 0;
+
+		int total = 0;
+		for (int i =0; i < nums.length; i++){
+			total = total + nums[i]; // or total += nums[1]
+		}
+
+		return total;
 	}
 
 	/*
@@ -150,6 +176,8 @@ public class Exercises {
 	 lucky13([1, 2, 4]) → false
 	 */
 	public boolean lucky13(int[] nums) {
+
+
 		return false;
 	}
 
