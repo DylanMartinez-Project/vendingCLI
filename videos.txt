@@ -16,3 +16,7 @@ Passcode: wPgu4#X%
 1-3 Java Expressions and Control Flow:
 https://techelevator.zoom.us/rec/share/KCynjF8xK1QrpPTJHnX4o-LmYn-g7IEphetjtksRaAw5WCtU3Wd_K67mBJDEYANR.bJyhJ9hxTS1w1TL2 
 Passcode: K.PX1P2r
+
+1-4 Java Arrays and Loops:
+https://techelevator.zoom.us/rec/share/xgyN6W-zO0IeayTeJzhWBChjphbOshCDkVW25ZnrmuKkrDRlc0mye6dOfuNVQRs.6r-DVyUjugrj5282 
+Passcode: srC697@W
