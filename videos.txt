@@ -20,3 +20,7 @@ Passcode: K.PX1P2r
 1-4 Java Arrays and Loops:
 https://techelevator.zoom.us/rec/share/xgyN6W-zO0IeayTeJzhWBChjphbOshCDkVW25ZnrmuKkrDRlc0mye6dOfuNVQRs.6r-DVyUjugrj5282 
 Passcode: srC697@W
+
+1-5 Java User I/O:
+https://techelevator.zoom.us/rec/share/Z5Earse25Who0UD2qGEkHUnTJSigpHCPqxjzdzqLrpZ4fnOELsMkYCDvXvVArmYy.YoQBRiv-BPwsDv1J 
+Passcode: Pv4S!^J?
