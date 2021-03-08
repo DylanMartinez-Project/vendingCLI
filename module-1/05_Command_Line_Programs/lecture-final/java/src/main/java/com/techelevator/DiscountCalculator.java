@@ -9,18 +9,18 @@ class DiscountCalculator {
      */
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); // START PROGRAM WITH THIS
 
-        System.out.println("Welcome to the Discount Calculator");
+        System.out.println("Welcome to the Discount Calculator"); // GREETING TO USER
 
         // Prompt the user for a discount amount
         // The answer needs to be saved as a double
-        System.out.print("Enter the discount amount (w/out percentage): ");
+        System.out.print("Enter the discount amount (w/out percentage): "); // ASK USER FOR %
         double discount = Double.parseDouble(scanner.nextLine()) / 100.0;
 
         // Prompt the user for a series of prices
         System.out.print("Please provide a series of prices (space separated): ");
-        String prices = scanner.nextLine();
+        String prices = scanner.nextLine(); // 32 23 35
 
         // Split the string up into separate values
         String[] priceArray = prices.split(" ");

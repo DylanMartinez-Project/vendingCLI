@@ -7,7 +7,7 @@ public class TempConvert {
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
-		System.out.println( "PLEASE ENTER THE TEMPERATURE: " );
+		System.out.println( "PLEASE ENTER THE TEMPERATURE: " ); // ASKS PERSON TO ENTER SOMETHING
 
 		String tempInput = scanner.nextLine();  //PERSON INPUT
 		double tempDegree = Double.parseDouble(tempInput);  // NUM VALUE OF DEGREE

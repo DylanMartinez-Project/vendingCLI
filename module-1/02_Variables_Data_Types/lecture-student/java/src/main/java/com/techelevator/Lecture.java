@@ -4,32 +4,38 @@ public class Lecture {
 
 	public static void main(String[] args) {
 		
-		/*
-		1. Create a variable to hold an int and call it numberOfExercises.
-			Then set it to 26.
-		*/
-		int numberOfExercises = 26;
-		System.out.println(numberOfExercises);
-
-		/*
-		2. Create a variable to hold a double and call it half.
-			Set it to 0.5.
-		*/
-		double half = 0.5;
-		System.out.println(half);
-
 //		/*
-//		3. Create a variable to hold a String and call it name.
-//			Set it to "TechElevator".
+//		1. Create a variable to hold an int and call it numberOfExercises.
+//			Then set it to 26.
 //		*/
+//		int numberOfExercises = 26;
+//		System.out.println(numberOfExercises);
+//
+//		/*
+//		2. Create a variable to hold a double and call it half.
+//			Set it to 0.5.
+//		*/
+//		double half = 0.5;
+//		System.out.println(half);
+//
+////		/*
+////		3. Create a variable to hold a String and call it name.
+////			Set it to "TechElevator".
+////		*/
+//
+//		String name = "TechElevator";
+//
+//		System.out.println(name);
+//
+//		/*
+//		4. Create a variable called seasonsOfFirefly and set it to 1.
 
-		String name = "TechElevator";
+		int seasonsOfFireFly = 1;
 
-		System.out.println(name);
+		System.out.println(seasonsOfFireFly);
 
-		/*
-		4. Create a variable called seasonsOfFirefly and set it to 1.
-		*/
+
+
 
 		//System.out.println(seasonsOfFirefly);
 
