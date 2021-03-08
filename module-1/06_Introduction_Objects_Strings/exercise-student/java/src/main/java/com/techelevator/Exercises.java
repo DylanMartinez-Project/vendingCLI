@@ -9,7 +9,8 @@ public class Exercises {
 	 helloName("X") → "Hello X!"
 	 */
 	public String helloName(String name) {
-		return null;
+		String answer = "Hello " + name + "!";
+		return answer;
 	}
 
 	/*
@@ -20,7 +21,10 @@ public class Exercises {
 	 makeAbba("What", "Up") → "WhatUpUpWhat"
 	 */
 	public String makeAbba(String a, String b) {
-		return null;
+
+		String aB = a + b + b + a;
+
+		return aB;
 	}
 
 	/*
@@ -32,7 +36,10 @@ public class Exercises {
 	 makeTags("cite", "Yay") → "<cite>Yay</cite>"
 	 */
 	public String makeTags(String tag, String word) {
-		return null;
+
+		String makeGreat = "<" + tag + ">" + word + "</" + tag + ">";
+
+		return makeGreat;   //
 	}
 
 	/*
@@ -44,7 +51,13 @@ public class Exercises {
 	 makeOutWord("[[]]", "word") → "[[word]]"
 	 */
 	public String makeOutWord(String out, String word) {
-		return null;
+
+		String openingTag = out.substring(0, 2);
+		String closingTag = out.substring(2, 4);
+		String answer = openingTag + word + closingTag;
+
+
+		return answer;
 	}
 
 	/*
@@ -55,7 +68,13 @@ public class Exercises {
 	 extraEnd("Hi") → "HiHiHi"
 	 */
 	public String extraEnd(String str) {
-		return null;
+
+		String twoChar = str.substring(str.length() - 2);
+		{
+
+
+			return twoChar + twoChar + twoChar;
+		}
 	}
 
 	/*
@@ -67,8 +86,14 @@ public class Exercises {
 	 firstTwo("ab") → "ab"
 	 */
 	public String firstTwo(String str) {
-		return null;
+		if (str.length() < 2) {
+
+			return str;
+		} else {
+			return str.substring(0, 2);
+		}
 	}
+
 
 	/*
 	 Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
@@ -77,7 +102,11 @@ public class Exercises {
 	 firstHalf("abcdef") → "abc"
 	 */
 	public String firstHalf(String str) {
-		return null;
+
+		String first2 = str.substring(0, str.length() / 2);
+
+
+		return first2;
 	}
 
 	/*
@@ -88,7 +117,9 @@ public class Exercises {
 	 withoutEnd("coding") → "odin"
 	 */
 	public String withoutEnd(String str) {
-		return null;
+		String withEnd = str.substring(1, str.length() - 1);
+
+		return withEnd;
 	}
 
 	/*
@@ -100,8 +131,19 @@ public class Exercises {
 	 comboString("aaa", "b") → "baaab"
 	 */
 	public String comboString(String a, String b) {
-		return null;
+
+		int aLength = a.length();
+		int bLength = b.length();
+
+		if (aLength > bLength) {
+			return b + a + b;
+		}
+
+			return a + b + a;
 	}
+
+
+
 
 	/*
 	 Given 2 strings, return their concatenation, except omit the first char of each. The strings will
@@ -111,7 +153,11 @@ public class Exercises {
 	 nonStart("shotl", "java") → "hotlava"
 	 */
 	public String nonStart(String a, String b) {
-		return null;
+		String firstOff = a.substring(1);
+		String lastOff = b.substring(1);
+
+
+		return firstOff + lastOff;
 	}
 
 	/*
@@ -122,7 +168,11 @@ public class Exercises {
 	 left2("Hi") → "Hi"
 	 */
 	public String left2(String str) {
-		return null;
+
+		String firstOff = str.substring(2);
+		String lastOff = str.substring(0,2);
+
+		return firstOff + lastOff;
 	}
 
 	/*
@@ -133,7 +183,13 @@ public class Exercises {
 	 right2("Hi") → "Hi"
 	 */
 	public String right2(String str) {
-		return null;
+
+		String lastOff = str.substring(str.length()-2);
+		String first = str.substring(0,str.length()-2);
+
+
+
+		return lastOff + first;
 	}
 
 	/*
@@ -144,7 +200,12 @@ public class Exercises {
 	 theEnd("oh", true) → "o"
 	 */
 	public String theEnd(String str, boolean front) {
-		return null;
+		if(front == true){
+			return str.substring(0,1);
+		}
+
+
+		return str.substring(str.length()-1);
 	}
 
 	/*
@@ -155,7 +216,11 @@ public class Exercises {
 	 withoutEnd2("ab") → ""
 	 */
 	public String withoutEnd2(String str) {
-		return null;
+		if(str.length() > 2){
+			return str.substring(1,str.length()-1);
+		}
+
+		return "";
 	}
 
 	/*
@@ -166,6 +231,9 @@ public class Exercises {
 	 middleTwo("Practice") → "ct"
 	 */
 	public String middleTwo(String str) {
+		if( str.length()%2 == 0){
+			return str.substring(str.length()/2 - 1 , (str.length()/2 +1));
+		}
 		return null;
 	}
 
@@ -176,6 +244,12 @@ public class Exercises {
 	 endsLy("oddy") → false
 	 */
 	public boolean endsLy(String str) {
+		String endsLy = "ly";
+		String myString = str.substring(str.length()-2);
+
+		if (myString.equals(endsLy)){
+			return true;
+		}
 		return false;
 	}
 
