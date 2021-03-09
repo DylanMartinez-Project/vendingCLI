@@ -24,3 +24,7 @@ Passcode: srC697@W
 1-5 Java User I/O:
 https://techelevator.zoom.us/rec/share/Z5Earse25Who0UD2qGEkHUnTJSigpHCPqxjzdzqLrpZ4fnOELsMkYCDvXvVArmYy.YoQBRiv-BPwsDv1J 
 Passcode: Pv4S!^J?
+
+1-6 Java Strings:
+https://techelevator.zoom.us/rec/share/J6fXlMAWHF5l1Dotl8r2gsmyforkaEzS--vP7TMCNhm6Rc49xmezthrTezvyqiY.HppxL8_bpZ1WfWTz 
+Passcode: Ms+V0%$m
