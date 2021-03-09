@@ -16,43 +16,64 @@ public class Fibonacci {
 		// ASK THE USER HOW MANY ITERATIONS THEY WANT FOR THE SEQ
 		// USE THAT INPUT AS AN "N" VARIABLE TO STICK INTO THE LOOP
 
+
+
+		System.out.println("ENTER THE fib NUMBER : ");
+		String fibValue = scanner.nextLine();
+
+		int fibNum = Integer.parseInt(fibValue);
+
 		int a = 0;
 		int b = 1;
+		System.out.print(a);
+		int sum = 0;
 
-		System.out.println("ENTER THE NUMBER OF FIB ITERATIONS YOU WOULD LIKE -EX : 5  -");
-		String fibValue = scanner.nextLine();
-		double n = Double.parseDouble(fibValue) ; // Double.parsedouble makes user/strinig input = number we can use in array
-
-		// now i need to create the fib stuff
-
-		// now to print the first two given values a & b
-
-		System.out.println(a);
-		System.out.println(b);
-
-		// NOW CREATE a for Loop  TO PRINT REST OF THE FIB VALUES
-
-		int nextValue; // int nextValue is just a defined C variable
-
-
-
-		for(int i = 2; i < n; i++){
-
-			// this for loop starts at at the
-			// second element and goes up to the N iteration by increments of 1 (i++)
-			nextValue = a + b;  // here we set C to equal a +b
-			System.out.println(nextValue);
+		while( sum <= fibNum){// 0 is less than number user put in
+			System.out.print(","+ b );
+			sum = a + b ;
 			a = b;
-			b = nextValue;
-
-
+			b = sum;
 		}
-
-
-
-
 
 
 	}
 
-}
+
+	}
+
+
+//		double n = Double.parseDouble(fibValue) ; // Double.parsedouble makes user/strinig input = number we can use in array
+//
+//		// now i need to create the fib stuff
+//
+//		// now to print the first two given values a & b
+//
+//		System.out.println(a);
+//		System.out.println(b);
+//
+//		// NOW CREATE a for Loop  TO PRINT REST OF THE FIB VALUES
+//
+//		int nextValue; // int nextValue is just a defined C variable
+//
+//
+//
+//		for(int i = 2; i < n; i++){
+//
+//			// this for loop starts at at the
+//			// second element and goes up to the N iteration by increments of 1 (i++)
+//			nextValue = a + b;  // here we set C to equal a +b
+//			System.out.println(nextValue);
+//			a = b;
+//			b = nextValue;
+//
+//
+//		}
+//
+//
+//
+//
+//
+//
+//	}
+//
+//}
