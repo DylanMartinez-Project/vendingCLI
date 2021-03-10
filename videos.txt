@@ -28,3 +28,7 @@ Passcode: Pv4S!^J?
 1-6 Java Strings:
 https://techelevator.zoom.us/rec/share/J6fXlMAWHF5l1Dotl8r2gsmyforkaEzS--vP7TMCNhm6Rc49xmezthrTezvyqiY.HppxL8_bpZ1WfWTz 
 Passcode: Ms+V0%$m
+
+1-7 Java Lists, Stacks, and Queues:
+https://techelevator.zoom.us/rec/share/LK4lSIYEWNowr2AsTOSOfiBtqjnLHiYozegKvtDvFnr03Jk2ttb6EK8qvW8QWOUz.669jNfqefxd1yR5k 
+Passcode: @Vwk2w?N
