@@ -35,15 +35,17 @@ public class Exercises {
 	 list2Array( ["Red", "Orange", "Yellow"] )  ->  {"Red", "Orange", "Yellow"}
 	 list2Array( ["Left", "Right", "Forward", "Back"] )  ->  {"Left", "Right", "Forward", "Back"}
 	 */
-	public String[] list2Array(List<String> stringList) {
+	public String[] list2Array(List<String> stringList) {    // 166 ----175 lecture reference
 
-		
+		String[] stringArr = new String[stringList.size()];
+
+		for (int i = 0; i < stringList.size(); i++){
+			stringArr[i] = stringList.get(i);
+		}
 
 
 
-
-
-		return null;
+		return stringArr;
 	}
 
 	/*
@@ -54,7 +56,16 @@ public class Exercises {
 	 no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
 	 */
 	public List<String> no4LetterWords(String[] stringArray) {
-		return null;
+
+		List<String> no4LetterWords = new ArrayList<String>();
+		for (String noFour: stringArray ){
+			if (noFour.length() !=4 ){
+				no4LetterWords.add(noFour);
+			}
+		}
+
+
+		return no4LetterWords;
 	}
 
 	/*
@@ -65,8 +76,16 @@ public class Exercises {
 	 */
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
 
+		List<Double> divided = new ArrayList<Double>();
 
-		return null;
+		for ( Integer arrayDiv : intArray){
+		divided.add(arrayDiv/2.0);
+
+		}
+
+
+
+		return divided;
 	}
 
 	/*

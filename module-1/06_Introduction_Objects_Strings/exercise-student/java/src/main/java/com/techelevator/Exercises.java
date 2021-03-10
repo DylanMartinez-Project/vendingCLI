@@ -483,7 +483,7 @@ public class Exercises {
 		String temp = "";
 		for(int i = 0; i < str.length(); i++){
 			if(!(i > 0 && i <str.length()-1 && str.charAt(i) == 'x')){
-				temp = str.charAt(i) + temp;}
+				temp =  temp + str.charAt(i);}
 		}
 
 
@@ -497,7 +497,16 @@ public class Exercises {
 	 altPairs("CodingHorror") → "Congrr"
 	 */
 	public String altPairs(String str) {
-		return null;
+
+		String blank = "";
+		for (int i = 0 ;i <str.length(); i +=4){
+			blank = blank + str.charAt(i);
+			if(i+1 < str.length() ){
+				blank = blank + str.charAt(i +1);
+			}
+		}
+
+		return blank;
 	}
 
 	/*
@@ -508,7 +517,17 @@ public class Exercises {
 	 stringYak("yak123ya") → "123ya"
 	 */
 	public String stringYak(String str) {
-		return null;
+		String blank = "";
+		for (int i = 0 ;i <str.length(); i ++){
+			if (i + 2 < str.length() && str.charAt(i) == 'y' && str.charAt(i +2) == 'k'){
+				i = i + 2;
+			}
+			else {
+				blank = blank + str.charAt(i);
+			}
+		}
+
+		return blank;
 	}
 
 }
