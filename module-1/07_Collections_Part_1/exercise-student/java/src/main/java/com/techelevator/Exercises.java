@@ -1,6 +1,7 @@
 package com.techelevator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Exercises {
@@ -16,7 +17,16 @@ public class Exercises {
 	 array2List( {"Left", "Right", "Forward", "Back"} )  ->  ["Left", "Right", "Forward", "Back"]
 	 */
 	public List<String> array2List(String[] stringArray) {
-		return null;
+
+		List<String> array2List = new ArrayList<String>();      // We will be using the following List declaration:
+																//List <Type> name = new ArrayList<Type>();
+
+		for (String apples: stringArray ) {  // first segment  loops through each element of array we pass
+			array2List.add(apples);
+		}
+
+
+		return array2List;
 	}
 
 	/*
@@ -26,6 +36,13 @@ public class Exercises {
 	 list2Array( ["Left", "Right", "Forward", "Back"] )  ->  {"Left", "Right", "Forward", "Back"}
 	 */
 	public String[] list2Array(List<String> stringList) {
+
+		
+
+
+
+
+
 		return null;
 	}
 
@@ -47,6 +64,8 @@ public class Exercises {
 	 arrayInt2ListDouble( {84, 99, 3285, 13, 877} ) -> [42, 49.5, 1642.5, 6.5, 438.5]
 	 */
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
+
+
 		return null;
 	}
 
