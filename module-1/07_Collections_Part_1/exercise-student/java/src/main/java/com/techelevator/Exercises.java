@@ -20,9 +20,10 @@ public class Exercises {
 
 		List<String> array2List = new ArrayList<String>();      // We will be using the following List declaration:
 																//List <Type> name = new ArrayList<Type>();
+																// this is a "bucket " or "0 "
 
-		for (String apples: stringArray ) {  // first segment  loops through each element of array we pass
-			array2List.add(apples);
+		for (String blank: stringArray ) {  // first segment  loops through each element of array we pass
+			array2List.add(blank);
 		}
 
 
@@ -58,6 +59,7 @@ public class Exercises {
 	public List<String> no4LetterWords(String[] stringArray) {
 
 		List<String> no4LetterWords = new ArrayList<String>();
+
 		for (String noFour: stringArray ){
 			if (noFour.length() !=4 ){
 				no4LetterWords.add(noFour);
@@ -95,7 +97,14 @@ public class Exercises {
 	 findLargest( [34070, 1380, 81238, 7782, 234, 64362, 627] ) -> 64362
 	 */
 	public Integer findLargest(List<Integer> integerList) {
-		return null;
+
+		int largeVal = 0;
+		 for ( Integer largeNum : integerList){
+		 	if (largeNum > largeVal){
+		 		largeVal = largeNum;
+			}
+		 }
+		return largeVal;
 	}
 
 	/*
@@ -105,7 +114,15 @@ public class Exercises {
 	 oddOnly( {734, 233, 782, 811, 3, 9999} ) -> [233, 811, 3, 9999]
 	 */
 	public List<Integer> oddOnly(Integer[] integerArray) {
-		return null;
+
+		List<Integer> divided = new ArrayList<Integer>();
+		for (Integer placeholder: integerArray){
+
+			if(placeholder % 2 == 1){
+				divided.add(placeholder);
+			}
+		}
+		return divided;
 	}
 
 	/*
@@ -116,6 +133,16 @@ public class Exercises {
 	 foundIntTwice( [9, 23, 44, 2, 88, 44], 44) -> true
 	 */
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
+
+		int counter = 0;
+		for (Integer twice : integerList)
+			if( intToFind == twice){
+				counter = counter + 1;
+			}
+		if( counter >= 2){
+			return true;
+		}
+
 		return false;
 	}
 
@@ -133,7 +160,25 @@ public class Exercises {
 	 equals "1")
 	 */
 	public List<String> fizzBuzzList(Integer[] integerArray) {
-		return null;
+
+		List<String> ourList = new ArrayList<String>();
+
+		List<String> fizzList = new ArrayList<String>();
+		for (Integer placeholder: integerArray) {
+			if (placeholder % 3 == 0 && placeholder % 5 == 0) {
+				fizzList.add("FizzBuzz");
+			}
+			else if (placeholder % 3 == 0) {
+				fizzList.add("Fizz");
+			}
+			else if (placeholder % 5 == 0) {
+				fizzList.add("Buzz");
+			}
+			else {
+				fizzList.add(Integer.toString(placeholder));
+			}
+		}
+		return fizzList;
 	}
 
 	/*
@@ -144,6 +189,8 @@ public class Exercises {
 	 interleaveLists( [1, 2, 3], [4, 5, 6] )  ->  [1, 4, 2, 5, 3, 6]
 	 */
 	public List<Integer> interleaveLists(List<Integer> listOne, List<Integer> listTwo) {
+
+
 		return null;
 	}
 

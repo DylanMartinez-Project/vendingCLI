@@ -2,12 +2,20 @@ package com.techelevator;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class Exercises {
 
 	/*
 	 * Given the name of an animal, return the name of a group of that animal
-	 * (e.g. "Elephant" -> "Herd", "Rhino" - "Crash").
+	 * (e.g. "Elephant" -> "Herd", "Rhino"
+	 * Giraffe -> Tower
+	 * Elephant -> Herd
+	 * Lion -> Pride
+	 * Crow -> Murder
+	 * Pigeon -> Kit
+	 * Flamingo -> Pat
+	 * Deer -> Herd - "Crash").
 	 *
 	 * The animal name should be case insensitive so "elephant", "Elephant", and
 	 * "ELEPHANT" should all return "herd".
@@ -15,13 +23,6 @@ public class Exercises {
 	 * If the name of the animal is not found, null, or empty, return "unknown".
 	 *
 	 * Rhino -> Crash
-	 * Giraffe -> Tower
-	 * Elephant -> Herd
-	 * Lion -> Pride
-	 * Crow -> Murder
-	 * Pigeon -> Kit
-	 * Flamingo -> Pat
-	 * Deer -> Herd
 	 * Dog -> Pack
 	 * Crocodile -> Float
 	 *
@@ -34,7 +35,38 @@ public class Exercises {
 	 *
 	 */
 	public String animalGroupName(String animalName) {
-		return null;
+		//restrictive statements
+
+
+		Map<String, String> animals = new HashMap<String, String>();
+
+		animals.put("GIRAFFE", "Tower");
+		animals.put("ELEPHANT", "Herd");
+		animals.put("LION", "Pride");
+		animals.put("CROW", "Murder");
+		animals.put("PIGEON", "Kit");
+		animals.put("FLAMINGO", "Pat");
+		animals.put("DEER", "Herd");
+		animals.put("RHINO", "Crash");
+		animals.put("DOG", "Pack");
+		animals.put("CROCODILE", "Float");
+
+		if (animalName == null) {
+			return "unknown";
+		}
+
+		if (animalName == "") {
+			return "unknown";
+		}						// does crocodiles " in upper case" match a key we have
+		if(animals.containsKey(animalName.toUpperCase())){
+			return animals.get(animalName.toUpperCase());
+		}						//CROCODILE
+
+
+
+
+
+		return "unknown";
 	}
 
 	/*
@@ -60,8 +92,41 @@ public class Exercises {
 	 *
 	 */
 	public double isItOnSale(String itemNumber) {
-		return -1.0;
+
+
+		if  (itemNumber == null) {
+			return 0.0;
+		}
+
+		if (itemNumber == "") {
+			return 0.0;
+		}
+
+
+		System.out.println("value of itemNumber being passed in: " + itemNumber);
+
+		Map<String, Double> sales = new HashMap<String, Double>();
+
+
+		sales.put("KITCHEN4001", 0.20);
+		sales.put("GARAGE1070", 0.15);
+		sales.put("LIVINGROOM", 0.10);
+		sales.put("KITCHEN6073", 0.40);
+		sales.put("BEDROOM3434", 0.60);
+		sales.put("BATH0073", 0.15);
+
+		boolean doesItemExist = sales.containsKey(itemNumber.toUpperCase());
+
+		if(doesItemExist) {
+			double discount = sales.get(itemNumber.toUpperCase());
+			return discount;
+		} else {
+			return 0.0;
+		}
 	}
+
+
+
 
 	/*
 	 * Modify and return the given Map as follows: if "Peter" has more than 0 money, transfer half of it to "Paul",
@@ -74,8 +139,41 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
-		return null;
+
+		int peterGets = peterPaul.get("Peter");
+		int paulGets = peterPaul.get("Paul");
+
+		int halfVal = 0;
+		int addingPenny = 0;
+
+		if(peterPaul.get("Paul") >= 1000 || peterPaul.get("Peter") == 0) {
+			return peterPaul;
+		}
+
+		if(peterPaul.get("Peter") % 2 == 1) {
+			addingPenny = 1;
+		}
+
+		halfVal = peterPaul.get("Peter")/2;
+
+		int paulHas = peterPaul.get("Paul") + halfVal;
+
+		peterPaul.remove("Peter");
+		peterPaul.remove("Paul");
+
+		peterPaul.put("Peter", halfVal + addingPenny);
+		peterPaul.put("Paul", paulHas);
+
+		return peterPaul;
 	}
+
+
+
+
+
+
+
+
 
 	/*
 	 * Modify and return the given Map as follows: if "Peter" has $50 or more, AND "Paul" has $100 or more,
@@ -87,6 +185,8 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
+
+
 		return null;
 	}
 
@@ -99,7 +199,17 @@ public class Exercises {
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
 	public Map<String, String> beginningAndEnding(String[] words) {
-		return null;
+
+		Map<String, String> valueKey = new HashMap<String, String>();
+
+		for (String strings : words){
+
+			valueKey.put(strings.substring(0, 1), strings.substring(strings.length() -1));
+
+		}
+
+
+		return valueKey;
 	}
 
 	/*
@@ -115,7 +225,23 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		return null;
+
+		Map<String, Integer> wordCounter = new HashMap<String, Integer>();
+
+
+		for (String placeholder2 : words) {
+			if(wordCounter.containsKey(placeholder2)){
+				int currentCount = wordCounter.get(placeholder2);
+				currentCount++;
+
+				wordCounter.put(placeholder2, currentCount);
+			}
+			else {
+				wordCounter.put(placeholder2, 1);
+			}
+			}
+
+		return wordCounter;
 	}
 
 	/*
@@ -130,8 +256,36 @@ public class Exercises {
 	 *
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
-		return null;
-	}
+
+//		Map<Integer, Integer> intCount = new HashMap<Integer, Integer>();
+
+//		int counter = 0;
+//
+//		for( Integer	placeholder	:		ints	)
+//			if ()
+//		public Map<Integer, Integer> integerCount(int[] ints) {
+//
+			Map<Integer, Integer> counts = new HashMap<>();
+
+
+
+			for (int integerCheck : ints) {
+
+				if(counts.containsKey(integerCheck)) {
+
+					int currentCount = counts.get(integerCheck);
+					currentCount++;
+
+					counts.put(integerCheck, currentCount) ;
+				} else {
+					counts.put(integerCheck, 1);
+				}
+			}
+			return counts;
+		}
+
+
+
 
 	/*
 	 * Given an array of Strings, return a Map<String, Boolean> where each different String is a key and value
@@ -143,6 +297,12 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
+
+		Map<String, Boolean> counts = new HashMap<String, Boolean>();
+
+
+
+
 		return null;
 	}
 
@@ -177,7 +337,26 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> last2Revisited(String[] words) {
+
+
+
+
 		return null;
 	}
 
 }
+//public Map<Integer, Integer> integerCount(int[] ints) {
+//
+//		Map<Integer, Integer> counts = new HashMap<>();
+//
+//		for (int integerCheck : ints) {
+//			if(counts.containsKey(integerCheck)) {
+//				int currentCount = counts.get(integerCheck);
+//				currentCount++;
+//				counts.put(integerCheck, currentCount) ;
+//			} else {
+//				counts.put(integerCheck, 1);
+//			}
+//		}
+//		return counts;
+//	}
