@@ -190,8 +190,19 @@ public class Exercises {
 	 */
 	public List<Integer> interleaveLists(List<Integer> listOne, List<Integer> listTwo) {
 
+		List<Integer> ourList = new ArrayList<Integer>();
 
-		return null;
+		for (int i = 0, x = 0; i < listOne.size() || x < listTwo.size(); i++, x++){
+
+			if (i < listOne.size()) {
+				ourList.add(listOne.get(i));
+			}
+			if (x <listTwo.size()){
+				ourList.add(listTwo.get(i));
+			}
+		}
+
+		return ourList;
 	}
 
 }

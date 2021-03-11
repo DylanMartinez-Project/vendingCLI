@@ -186,8 +186,32 @@ public class Exercises {
 	 */
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
 
+		Map<String, Integer> partnership = new HashMap<>();
 
-		return null;
+
+
+			int peterTotal = peterPaul.get("Peter"); //  LOSS
+			int paulTotal =  peterPaul.get("Paul"); //  LOSS
+
+			int quarterMoneyPeter = 0;
+			int quarterMoneyPaul = 0;
+
+			if (peterTotal>= 5000 && paulTotal >= 10000) {
+				quarterMoneyPeter = peterTotal/4;
+				quarterMoneyPaul = paulTotal/4;
+
+				int peterNew = quarterMoneyPeter *3;
+				int paulNew = quarterMoneyPaul*3;
+
+				int contribMoney = quarterMoneyPaul + quarterMoneyPeter;
+
+				partnership.put("Peter", peterNew);
+				partnership.put("Paul", paulNew);
+				partnership.put("PeterPaulPartnership", contribMoney);
+				return partnership;
+			}
+
+		return peterPaul;
 	}
 
 	/*
@@ -300,10 +324,15 @@ public class Exercises {
 
 		Map<String, Boolean> counts = new HashMap<String, Boolean>();
 
+		for( String jalopeno	:words	 ){
+			if(counts.containsKey(jalopeno) ){
+				counts.put(jalopeno, true);
+			} else {
+				counts.put(jalopeno, false);
+			}
 
-
-
-		return null;
+		}
+		return counts;
 	}
 
 	/*
