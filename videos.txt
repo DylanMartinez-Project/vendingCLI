@@ -32,3 +32,7 @@ Passcode: Ms+V0%$m
 1-7 Java Lists, Stacks, and Queues:
 https://techelevator.zoom.us/rec/share/LK4lSIYEWNowr2AsTOSOfiBtqjnLHiYozegKvtDvFnr03Jk2ttb6EK8qvW8QWOUz.669jNfqefxd1yR5k 
 Passcode: @Vwk2w?N
+
+1-8 Java Maps and Sets: 
+https://techelevator.zoom.us/rec/share/7MpFYeKW7aEDh7uk3K5-hDtT8vUbEPRKhzaVVPD5qPVNLKn15YRNyhLCobnTl6u6.ZbZKBwGE2UXynOko 
+Passcode: 8^CJ!F@z
