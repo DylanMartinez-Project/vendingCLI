@@ -331,8 +331,15 @@ public class Exercises {
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse,
 													 Map<String, Integer> remoteWarehouse) {
 
+		for (String item :remoteWarehouse.keySet()) {
+			if (!mainWarehouse.containsKey(item)) {
+				mainWarehouse.put(item, remoteWarehouse.get(item));
+			} else {
+				mainWarehouse.put(item, mainWarehouse.get(item) + remoteWarehouse.get(item));
+			}
+		}
+		return mainWarehouse;
 
-		return null;
 	}
 
 	/*
