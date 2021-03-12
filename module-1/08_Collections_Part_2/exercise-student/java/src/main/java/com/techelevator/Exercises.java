@@ -57,13 +57,10 @@ public class Exercises {
 
 		if (animalName == "") {
 			return "unknown";
-		}						// does crocodiles " in upper case" match a key we have
-		if(animals.containsKey(animalName.toUpperCase())){
+		}                        // does crocodiles " in upper case" match a key we have
+		if (animals.containsKey(animalName.toUpperCase())) {
 			return animals.get(animalName.toUpperCase());
-		}						//CROCODILE
-
-
-
+		}                        //CROCODILE
 
 
 		return "unknown";
@@ -94,7 +91,7 @@ public class Exercises {
 	public double isItOnSale(String itemNumber) {
 
 
-		if  (itemNumber == null) {
+		if (itemNumber == null) {
 			return 0.0;
 		}
 
@@ -117,15 +114,13 @@ public class Exercises {
 
 		boolean doesItemExist = sales.containsKey(itemNumber.toUpperCase());
 
-		if(doesItemExist) {
+		if (doesItemExist) {
 			double discount = sales.get(itemNumber.toUpperCase());
 			return discount;
 		} else {
 			return 0.0;
 		}
 	}
-
-
 
 
 	/*
@@ -146,15 +141,15 @@ public class Exercises {
 		int halfVal = 0;
 		int addingPenny = 0;
 
-		if(peterPaul.get("Paul") >= 1000 || peterPaul.get("Peter") == 0) {
+		if (peterPaul.get("Paul") >= 1000 || peterPaul.get("Peter") == 0) {
 			return peterPaul;
 		}
 
-		if(peterPaul.get("Peter") % 2 == 1) {
+		if (peterPaul.get("Peter") % 2 == 1) {
 			addingPenny = 1;
 		}
 
-		halfVal = peterPaul.get("Peter")/2;
+		halfVal = peterPaul.get("Peter") / 2;
 
 		int paulHas = peterPaul.get("Paul") + halfVal;
 
@@ -166,13 +161,6 @@ public class Exercises {
 
 		return peterPaul;
 	}
-
-
-
-
-
-
-
 
 
 	/*
@@ -189,27 +177,26 @@ public class Exercises {
 		Map<String, Integer> partnership = new HashMap<>();
 
 
+		int peterTotal = peterPaul.get("Peter"); //  LOSS
+		int paulTotal = peterPaul.get("Paul"); //  LOSS
 
-			int peterTotal = peterPaul.get("Peter"); //  LOSS
-			int paulTotal =  peterPaul.get("Paul"); //  LOSS
+		int quarterMoneyPeter = 0;
+		int quarterMoneyPaul = 0;
 
-			int quarterMoneyPeter = 0;
-			int quarterMoneyPaul = 0;
+		if (peterTotal >= 5000 && paulTotal >= 10000) {
+			quarterMoneyPeter = peterTotal / 4;
+			quarterMoneyPaul = paulTotal / 4;
 
-			if (peterTotal>= 5000 && paulTotal >= 10000) {
-				quarterMoneyPeter = peterTotal/4;
-				quarterMoneyPaul = paulTotal/4;
+			int peterNew = quarterMoneyPeter * 3;
+			int paulNew = quarterMoneyPaul * 3;
 
-				int peterNew = quarterMoneyPeter *3;
-				int paulNew = quarterMoneyPaul*3;
+			int contribMoney = quarterMoneyPaul + quarterMoneyPeter;
 
-				int contribMoney = quarterMoneyPaul + quarterMoneyPeter;
-
-				partnership.put("Peter", peterNew);
-				partnership.put("Paul", paulNew);
-				partnership.put("PeterPaulPartnership", contribMoney);
-				return partnership;
-			}
+			partnership.put("Peter", peterNew);
+			partnership.put("Paul", paulNew);
+			partnership.put("PeterPaulPartnership", contribMoney);
+			return partnership;
+		}
 
 		return peterPaul;
 	}
@@ -226,9 +213,9 @@ public class Exercises {
 
 		Map<String, String> valueKey = new HashMap<String, String>();
 
-		for (String strings : words){
+		for (String strings : words) {
 
-			valueKey.put(strings.substring(0, 1), strings.substring(strings.length() -1));
+			valueKey.put(strings.substring(0, 1), strings.substring(strings.length() - 1));
 
 		}
 
@@ -254,16 +241,15 @@ public class Exercises {
 
 
 		for (String placeholder2 : words) {
-			if(wordCounter.containsKey(placeholder2)){
+			if (wordCounter.containsKey(placeholder2)) {
 				int currentCount = wordCounter.get(placeholder2);
 				currentCount++;
 
 				wordCounter.put(placeholder2, currentCount);
-			}
-			else {
+			} else {
 				wordCounter.put(placeholder2, 1);
 			}
-			}
+		}
 
 		return wordCounter;
 	}
@@ -289,26 +275,23 @@ public class Exercises {
 //			if ()
 //		public Map<Integer, Integer> integerCount(int[] ints) {
 //
-			Map<Integer, Integer> counts = new HashMap<>();
+		Map<Integer, Integer> counts = new HashMap<>();
 
 
+		for (int integerCheck : ints) {
 
-			for (int integerCheck : ints) {
+			if (counts.containsKey(integerCheck)) {
 
-				if(counts.containsKey(integerCheck)) {
+				int currentCount = counts.get(integerCheck);
+				currentCount++;
 
-					int currentCount = counts.get(integerCheck);
-					currentCount++;
-
-					counts.put(integerCheck, currentCount) ;
-				} else {
-					counts.put(integerCheck, 1);
-				}
+				counts.put(integerCheck, currentCount);
+			} else {
+				counts.put(integerCheck, 1);
 			}
-			return counts;
 		}
-
-
+		return counts;
+	}
 
 
 	/*
@@ -324,8 +307,8 @@ public class Exercises {
 
 		Map<String, Boolean> counts = new HashMap<String, Boolean>();
 
-		for( String jalopeno	:words	 ){
-			if(counts.containsKey(jalopeno) ){
+		for (String jalopeno : words) {
+			if (counts.containsKey(jalopeno)) {
 				counts.put(jalopeno, true);
 			} else {
 				counts.put(jalopeno, false);
@@ -346,7 +329,7 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse,
-			Map<String, Integer> remoteWarehouse) {
+													 Map<String, Integer> remoteWarehouse) {
 		return null;
 	}
 
@@ -355,8 +338,10 @@ public class Exercises {
 	 *
 	 * Given an array of Strings, for each String, the count of the number of times that a subString length 2 appears
 	 * in the String and also as the last 2 chars of the String, so "hixxxhi" yields 1.
+	 * 					//EQUALS?
 	 *
-	 * We don't count the end subString, but the subString may overlap a prior position by one.  For instance, "xxxx"
+	 *
+	 * 	 * We don't count the end subString, but the subString may overlap a prior position by one.  For instance, "xxxx"
 	 * has a count of 2, one pair at position 0, and the second at position 1. The third pair at position 2 is the
 	 * end subString, which we don't count.
 	 *
@@ -367,12 +352,22 @@ public class Exercises {
 	 */
 	public Map<String, Integer> last2Revisited(String[] words) {
 
-
-
-
-		return null;
+		Map<String, Integer> keyAndCount = new HashMap<>();
+		for (String key : words) {
+			Integer count = 0;
+			if (key.length() <= 2) {
+				keyAndCount.put(key, 0);
+			} else {
+				for (int i = 0; i < key.length() - 3; i++) {
+					if (key.substring(i, i + 2).equals(key.substring(key.length() - 2))) {
+						count++;
+					}
+				}
+			}
+			keyAndCount.put(key, count);
+		}
+		return keyAndCount;
 	}
-
 }
 //public Map<Integer, Integer> integerCount(int[] ints) {
 //
