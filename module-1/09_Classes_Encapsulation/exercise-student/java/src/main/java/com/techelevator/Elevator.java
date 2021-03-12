@@ -9,7 +9,7 @@ public class Elevator {
     public Elevator(int totalNumberOffloors) {
         this.numberOfFloors = totalNumberOffloors;
     }
-    
+
     public void openDoor() {
         doorOpen = true;
     }

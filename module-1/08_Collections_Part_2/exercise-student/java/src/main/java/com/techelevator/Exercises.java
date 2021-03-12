@@ -330,6 +330,8 @@ public class Exercises {
 	 */
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse,
 													 Map<String, Integer> remoteWarehouse) {
+
+
 		return null;
 	}
 
