@@ -33,8 +33,7 @@ public class Airplane {
                 this.totalCoachSeats = totalCoachSeats;
             }
 
-            public int getAvailableFirstClassSeats () {                          // not voided
-
+            public int getAvailableFirstClassSeats () {
                 return this.totalFirstClassSeats - this.bookedFirstClassSeats;
 
             }
