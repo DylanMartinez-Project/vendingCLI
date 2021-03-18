@@ -10,12 +10,10 @@ public class Exercises {
     }
 
 
-
-
     public int countEvens(int[] nums) {
         int eventIntCount = 0;
 
-        for (int i = 0; i < nums.length -1; i++) {
+        for (int i = 0; i < nums.length ; i++) {
             if (nums[i] % 2 == 0) {
                 eventIntCount++;
             }
@@ -40,7 +38,7 @@ public class Exercises {
         if (animalName != null && animals.containsKey(animalName.toLowerCase())) {
             return animals.get(animalName.toLowerCase());
         } else {
-            return "not found";
+            return "unknown";
         }
     }
 
@@ -55,7 +53,6 @@ public class Exercises {
         int len = str.length();
         return str.substring(len - 1) + str.substring(len - 1) + str.substring(len - 1);
     }
-
 
 
 }

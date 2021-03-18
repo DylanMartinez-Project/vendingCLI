@@ -41,6 +41,12 @@ public class LectureTest {
 	public void length_returns_the_number_of_characters_in_a_String() {
 		System.out.println("length_returns_the_number_of_characters_in_a_String"); // FOR DEMONSTRATION PURPOSES ONLY, don't do this in your own tests
 
+		String theString = "Java";
+		int actualResult = theString.length();
+		int expectedResult = 4;
+
+		Assert.assertEquals(expectedResult, actualResult);
+
 
 	}
 
@@ -48,11 +54,30 @@ public class LectureTest {
 	public void startsWith_returns_true_if_a_string_starts_with_the_specified_characters() {
 		System.out.println("startsWith_returns_true_if_a_string_starts_with_the_specified_characters"); // FOR DEMONSTRATION PURPOSES ONLY, don't do this in your own tests
 
+		String theString = "Hello World!";
+		boolean actualResult = theString.startsWith("Hello");
+		boolean expectedResult = true;
+
+		Assert.assertEquals(expectedResult, actualResult);
+
 	}
 
 	@Test
 	public void this_test_fails_every_time() {
 
+		Assert.fail("Always FAIL!!");
+	}
+		@Test
+		public void this_test_is_ok_everytime(){
+			Assert.assertEquals(1,1);
+
+			boolean areTheseStringsEqual =  "Potato".equals("Potato");
+			boolean actualResult = true;
+
+			Assert.assertTrue(areTheseStringsEqual);
+
+		}
+
 	}
 
-}
+
