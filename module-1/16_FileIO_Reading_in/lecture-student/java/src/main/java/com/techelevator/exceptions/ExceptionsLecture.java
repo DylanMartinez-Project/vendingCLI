@@ -1,17 +1,59 @@
 package com.techelevator.exceptions;
 
+import java.util.Currency;
 import java.util.Scanner;
 
 public class ExceptionsLecture {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		
 
-		
-				
+		System.out.println("Example 1");
+		try {
+			String[] cities = {"Cleveland", "Columbus", "Cincinatti"};
+			System.out.println(cities[3]);
+			System.out.println("Hello?");
+		} catch (ArrayIndexOutOfBoundsException e){
+			System.out.println("AN ARRAY OUT OF BOUNDS EXCEPTION HAS OCCURRED");
+		}
+
+		System.out.println("Example 2");
+		System.out.println( "hello everyone watch this !");
+
+		try {
+			doSomethingDangerous();
+		} catch(ArrayIndexOutOfBoundsException e){
+			System.out.println(" silly rabbit ");
+		}
+
+		System.out.println("Example 3");
+		try {
+			int nights = -3;
+			int numberOfGuests = 2;
+			calculateHotelRoomCharges(nights, numberOfGuests);
+		} catch (IllegalArgumentException e ) {
+			System.out.println("exception occurred");
+			e.printStackTrace();
+		}
+
+		System.out.println("Example 4");
+		try {
+			double currentBalance = 250;
+			double amountToWithdraw = 300;
+			double newBalance = withdraw(currentBalance, amountToWithdraw);
+		} catch (OverdraftException e){
+			System.out.println(" you dont have enough money man ");
+		}
+
+
+
 
 	}
+
+
+
+
+
 	
 	/* this method does not need to declare that it throws an IllegalArgumentException because
 	 * it is a subclass of RuntimeException.  These are known as "unchecked exceptions" because
