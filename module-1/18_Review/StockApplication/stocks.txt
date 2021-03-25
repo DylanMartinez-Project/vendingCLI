@@ -1,0 +1,5 @@
+Amazon|AMZN|3137.50|0.86
+Tesla|TSLA|662.16|-1.17
+Facebook|FB|290.63|0.99
+Google|GOOG|2052.96|0.70
+Netflix|NFLX|535.09|2.29
