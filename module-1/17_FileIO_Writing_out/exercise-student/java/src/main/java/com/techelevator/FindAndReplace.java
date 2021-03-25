@@ -30,6 +30,8 @@ public class FindAndReplace {
             System.out.println("name" + f.getName());
             System.out.println("absolute path" + f.getAbsolutePath());
 
+
+
             System.out.println(" What is the destination file");
             String destination = scanner.nextLine();
             File d = new File(destination);
