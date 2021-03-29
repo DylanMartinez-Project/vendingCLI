@@ -83,3 +83,7 @@ Passcode: e9xS=4!n
 Capstone 1 Kickoff:
 https://techelevator.zoom.us/rec/share/TRvEl7l1vmM17mNBEuHHVfa07_PZ2Q1PiUo8ud2HeByWUCtoJTZCRPJbGxdImJ0c.1JPB8TOvXA0yuF_P 
 Passcode: 9b^S#kWH
+
+2-1 SQL Intro:
+https://techelevator.zoom.us/rec/share/AKX5Kdxh_VpZf43AiOPB5VnR6BebPoIpCGEixn7IWyX5ZRe46bpouPr8Rkec5akY.v8PK2VLgIxFmoQEP 
+Passcode: E61#fZ+^
