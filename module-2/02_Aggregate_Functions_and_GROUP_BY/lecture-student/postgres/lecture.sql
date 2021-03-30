@@ -1,38 +1,103 @@
 -- ORDERING RESULTS
 
 -- Populations of all countries in descending order
-
+select name,population 
+from country
+order BY population DESC;
 --Names of countries and continents in ascending order
+select name, continent 
+from country
+order by continent ASC, name ASC;
 
 -- LIMITING RESULTS
 -- The name and average life expectancy of the countries with the 10 highest life expectancies.
+select name, lifeexpectancy
+from country 
+where lifeexpectancy is not null;
+ORDER BY lifeexpectancy DESC
+limit 10;
 
 -- CONCATENATING OUTPUTS
 
 -- The name & state of all cities in California, Oregon, or Washington.
 -- "city, state", sorted by state then city
 
+select (name || ', ' || district) as name_and_state
+from city
+where district in ('California', 'Oregon', 'Washington')
+order by district, name;
+
 -- AGGREGATE FUNCTIONS
 -- Average Life Expectancy in the World
+select AVG(lifeexpectancy)
+from country;
+
 
 -- Total population in Ohio
+select sum(population)
+from city
+where district = 'Ohio';
+
+
 
 -- The surface area of the smallest country in the world
+select min (surfacearea)
+from country;
+
+select surfacearea
+from country 
+order by surfacearea ASC
+limit 1;
 
 -- The 10 largest countries in the world
+select *
+from country
+order by surfacearea DESC;
+LIMIT 10;
 
 -- The number of countries who declared independence in 1991
+select COUNT(*)
+from country
+where indepyear = 1991;
+
 
 -- GROUP BY
 -- Count the number of countries where each language is spoken, ordered from most countries to least
+select language, count(countrycode) as countries 
+from countrylanguage 
+group by language
+order by countries desc;
 
 -- Average life expectancy of each continent ordered from highest to lowest
 
+select continent, AVG (lifeexpectancy) as expectancy
+from country
+group by continent
+order by expectancy desc;
+
+
 -- Exclude Antarctica from consideration for average life expectancy
+select continent, AVG (lifeexpectancy) as expectancy
+from country
+where continent <> 'Antartica'
+group by continent
+order by expectancy desc;
+
 
 -- Sum of the population of cities in each state in the USA ordered by state name
+select district, sum (population)
+from city
+where countrycode = 'USA'
+group by district
+order by district asc;
+
 
 -- The average population of cities in each state in the USA ordered by state name
+select district, avg (population)
+from city
+where countrycode = 'USA'
+group by district
+order by district asc;
 
 -- SUBQUERIES
 -- Find the names of cities under a given government leader
@@ -60,5 +125,11 @@
 -- the AVG population, and a COUNT of the total number of rows.
 
 -- Gets the MIN population and the MAX population from the city table.
+select min (population), max (population)
+from city;
+
 
 -- Using a GROUP BY with aggregate functions allows us to summarize information for a specific column. For instance, we are able to determine the MIN and MAX population for each countrycode in the city table.
+select countrycode,  min (population), max (population)
+from city
+group by countrycode;
