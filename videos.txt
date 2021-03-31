@@ -87,3 +87,7 @@ Passcode: 9b^S#kWH
 2-1 SQL Intro:
 https://techelevator.zoom.us/rec/share/AKX5Kdxh_VpZf43AiOPB5VnR6BebPoIpCGEixn7IWyX5ZRe46bpouPr8Rkec5akY.v8PK2VLgIxFmoQEP 
 Passcode: E61#fZ+^
+
+2-2 SQL Aggregate Functions and Sorting:
+https://techelevator.zoom.us/rec/share/qFNwjIzFr_CKJLWDqpTJjBaFzPAA5AfPpYKeA3LXET9dZLW_Tx4eirfz7DjHxvJL.Lst-Ji_PTdn9ub2u 
+Passcode: A1zGGUq%
