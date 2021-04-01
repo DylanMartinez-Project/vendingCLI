@@ -95,3 +95,11 @@ Passcode: A1zGGUq%
 2-3 SQL Joins
 https://techelevator.zoom.us/rec/share/7v8vwTzx08fGqRs8Gag9rR6auacdeJxEf5v6GbTCOoKYh9oGrNixCwsYfSJYthOT.1W1JOJU9YCS_0lS6 
 Passcode: @S6B*qAp
+
+2-4 SQL Insert, Update, Delete, Constraints and Referential Integrity
+https://techelevator.zoom.us/rec/share/eRMF-xPsI1JKCeoBQN5-m5HT_8mCvP7e_Vn1B4CU7jq6ACVHQLXYTKdWaCc10Gp7.VUFLGqkPcbiUTOMI 
+Passcode: gUQvE*2x
+
+2-5 Assessment Review
+https://techelevator.zoom.us/rec/share/7jJ-5MPoDz-b3KZihr7hys3NeBcHlT9nUMyOgURHfxshZMB2v2vJEc1TYGcUYc_0.FcTBo3wd5MLpa-r2 
+Passcode: fTn+?hf8
