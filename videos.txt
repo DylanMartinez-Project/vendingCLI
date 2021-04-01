@@ -91,3 +91,7 @@ Passcode: E61#fZ+^
 2-2 SQL Aggregate Functions and Sorting:
 https://techelevator.zoom.us/rec/share/qFNwjIzFr_CKJLWDqpTJjBaFzPAA5AfPpYKeA3LXET9dZLW_Tx4eirfz7DjHxvJL.Lst-Ji_PTdn9ub2u 
 Passcode: A1zGGUq%
+
+2-3 SQL Joins
+https://techelevator.zoom.us/rec/share/7v8vwTzx08fGqRs8Gag9rR6auacdeJxEf5v6GbTCOoKYh9oGrNixCwsYfSJYthOT.1W1JOJU9YCS_0lS6 
+Passcode: @S6B*qAp
