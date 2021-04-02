@@ -1,3 +1,16 @@
+
+select title, film_id
+from film f
+where title = 'TIES HUNGER';
+
+-- 889 
+
+
+
+
+
+
+
 -- CAMPGROUND TABLE
 -----------------------------------------------
 

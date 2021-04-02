@@ -158,7 +158,9 @@ select title, count(rental.rental_id)
 from film f
 join inventory inv on inv.film_id = f.film_id
 join rental on rental.inventory_id = inv.inventory_id
-group by title;
+group by title
+order by count(rental.rental_id) desc
+limit 10;
 
 
 
@@ -171,7 +173,8 @@ join inventory inv on inv.film_id = f.film_id
 join rental on rental.inventory_id = inv.inventory_id
 join film_category fc on f.film_id = fc.film_id
 join category c on c.category_id = fc.category_id
-group by c.name;
+group by c.name
+order by count(rental.rental_id) desc limit 10 ;
 
 -- 18. The top five Action film titles by number of rentals
 -- (#1 should have 30 rentals and #5 should have 28 rentals)
@@ -182,15 +185,40 @@ join rental on rental.inventory_id = inv.inventory_id
 join film_category fc on f.film_id = fc.film_id
 join category c on c.category_id = fc.category_id
 where c.category_id = '1'
-group by f.title;
+group by f.title
+order by  count(rental.rental_id) desc limit 5;
 
 
 
 -- 19. The top 10 actors ranked by number of rentals of films starring that actor
 -- (#1 should be â€œGINA DEGENERESâ€? with 753 rentals and #10 should be â€œSEAN GUINESSâ€? with 599 rentals)
+select a.actor_id, first_name,last_name , count(rental.rental_id)
+from film f
+join film_actor fa on fa.film_id = f.film_id
+join actor a on a.actor_id = fa.actor_id
+join inventory inv on inv.film_id = f.film_id
+join rental on rental.inventory_id = inv.inventory_id
 
-
+group by a.actor_id
+order by count(rental.rental_id) desc
+limit 10;
+ 
 
 
 -- 20. The top 5 â€œComedyâ€? actors ranked by number of rentals of films in the â€œComedyâ€? category starring that actor
 -- (#1 should have 87 rentals and #5 should have 72 rentals)
+
+
+select a.actor_id, first_name, last_name ,count(rental.rental_id)
+from film f
+join film_actor fa on fa.film_id = f.film_id
+join actor a on a.actor_id = fa.actor_id
+join inventory inv on inv.film_id = f.film_id
+join rental on rental.inventory_id = inv.inventory_id
+join film_category fc on f.film_id = fc.film_id
+--join category c on c.category_id = fc.category_id
+where fc.category_id = 5
+group by a.actor_id  
+order by count(rental.rental_id) desc
+limit 5;
+
