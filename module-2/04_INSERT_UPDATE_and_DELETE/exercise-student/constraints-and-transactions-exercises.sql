@@ -45,7 +45,7 @@ values ( 'Mathmagical');
 
 select f. * 
 from film f
-where f.title = 'EGG IGBY' or title =  'KARATE MOON'or title =  'YOUNG LANGUAGE' ;
+where f.title = 'EGG IGBY' or title =  'KARATE MOON'or title =  'YOUNG LANGUAGE'or title = 'Euclidean PI' ;
 -- 274 egg 
 -- 494 kara
 --996 young
@@ -64,11 +64,14 @@ where film_id = 996 ;
 
 update film_category 
 set category_id = 17
-where film_id = 1001;
+where film_id = 1002;
 
 update film_category 
 set category_id = 17
 where film_id = 714 ;
+
+insert into film_category (film_id, category_id)
+values (1002, 17);
 
 
 
@@ -81,10 +84,22 @@ from film f
 join film_category fc on fc.film_id = f.film_id
 where fc.category_id = 17;
 
-update 
+update film 
+set rating = 'G' 
+where film_id = 274; 
 
 
 -- 7. Add a copy of "Euclidean PI" to all the stores.
+
+insert into inventory (film_id, store_id)
+values (1002,1);
+
+insert into inventory (film_id, store_id)
+values (1002,2);
+
+select *
+from inventory 
+where film_id = 1002;
 
 -- 8. The Feds have stepped in and have impounded all copies of the pirated film,
 -- "Euclidean PI". The film has been seized from all stores, and needs to be
@@ -92,19 +107,34 @@ update
 -- (Did it succeed? Why?)
 -- <YOUR ANSWER HERE>
 
+delete from 
+film
+where film_id = 1002; 
+--fk constraint.  1002 is used in other tables
+
 -- 9. Delete Mathmagical from the category table.
 -- (Did it succeed? Why?)
+delete from category 
+where category_id = 17; 
+
+-- fk constraint
 -- <YOUR ANSWER HERE>
 
 -- 10. Delete all links to Mathmagical in the film_category tale.
 -- (Did it succeed? Why?)
--- <YOUR ANSWER HERE>
+-- <YOUR ANSWER HERE> 
+delete from film_category 
+where category_id = 17;
 
 -- 11. Retry deleting Mathmagical from the category table, followed by retrying
 -- to delete "Euclidean PI".
 -- (Did either deletes succeed? Why?)
 -- <YOUR ANSWER HERE>
+-- yes due to no fk constraint
 
 -- 12. Check database metadata to determine all constraints of the film id, and
 -- describe any remaining adjustments needed before the film "Euclidean PI" can
 -- be removed from the film table.
+
+delete from inventory where film_id = 1002;
+-- movie 1002 needs to be deleted from inventory proir to deletion 

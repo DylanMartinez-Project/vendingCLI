@@ -6,11 +6,6 @@ where title = 'TIES HUNGER';
 -- 889 
 
 
-
-
-
-
-
 -- CAMPGROUND TABLE
 -----------------------------------------------
 
