@@ -24,6 +24,11 @@ public class JDBCDepartmentDAO implements DepartmentDAO {
 
 		List <Department> allDepts = new ArrayList<Department>();
 
+
+
+
+
+
 		String sql = "SELECT department_id, name from department";
 
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
@@ -45,7 +50,21 @@ public class JDBCDepartmentDAO implements DepartmentDAO {
 
 	@Override
 	public List<Department> searchDepartmentsByName(String nameSearch) {
-		return new ArrayList<>();
+
+		List <Department> allDepts = new ArrayList<Department>();
+		String sql = "SELECT name from department where name = ?";
+
+
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sql,nameSearch);
+
+		while(results.next()){
+
+			String name = results.getString("name");
+			Department department = new Department();
+			department.setName(name);
+			allDepts.add(department);
+		}
+		return allDepts;
 	}
 
 	@Override
@@ -63,7 +82,10 @@ public class JDBCDepartmentDAO implements DepartmentDAO {
 
 	@Override
 	public Department createDepartment(Department newDepartment) {
-		return null;
+
+		String sql = "INSERT into department(name)" + "VALUES(?)";
+		jdbcTemplate.update(sql,newDepartment.getName());
+		return newDepartment;
 	}
 
 	@Override
