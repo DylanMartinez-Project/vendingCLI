@@ -71,6 +71,15 @@ public class JdbcUserDao implements UserDao {
             String storedSalt = results.getString("salt");
             String storedPassword = results.getString("password");
             String hashedPassword = passwordHasher.computeHash(password, Base64.decode(storedSalt));
+
+            System.out.println("*****************");
+            System.out.println("The plaintex pass is : " +password);
+            System.out.println("The stored encrypted pw is: " + storedPassword);
+            System.out.println("The trial password is:   " + hashedPassword);
+            System.out.println("*****************");
+
+
+
             return storedPassword.equals(hashedPassword);
         } else {
             return false;

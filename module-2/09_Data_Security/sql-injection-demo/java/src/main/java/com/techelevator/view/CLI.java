@@ -6,6 +6,8 @@ import com.techelevator.city.JDBCCityDAO;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -18,6 +20,12 @@ public class CLI {
         dataSource.setPassword("postgres1");
 
         CityDAO dao = new JDBCCityDAO(dataSource);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a country code (i/e USA, CAN");
+        String code = scanner.nextLine();
+
+        List <City> results = dao.findCityByCountryCode(code);
 
 
 

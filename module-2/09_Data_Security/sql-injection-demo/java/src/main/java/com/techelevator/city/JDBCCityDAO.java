@@ -1,15 +1,19 @@
 package com.techelevator.city;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 
 public class JDBCCityDAO implements CityDAO {
-
+	List<City> cities = new ArrayList<City>();
 	private JdbcTemplate jdbcTemplate;
 
 	public JDBCCityDAO(DataSource dataSource) {
@@ -19,8 +23,48 @@ public class JDBCCityDAO implements CityDAO {
 	@Override
 	public List<City> findCityByCountryCode(String countryCode) {
 
+		System.out.println("Code entered:  " + countryCode);
+
+		BasicDataSource ds = new BasicDataSource();
+		ds.setUrl("jdbc:postgresql://localhost:5432/world");
+		ds.setUsername("postgres");
+		ds.setPassword("postgres1");
+		try {
+			Connection connection = ds.getConnection();
+			String sql = "SELECT id, name, countrycode, district, population FROM city "
+					+ "WHERE countrycode = '" + countryCode + "'";
+
+			System.out.println("The sql being run is :   + " + sql);
+			ResultSet rs = connection.createStatement().executeQuery(sql);
+
+			while (rs.next()){
+
+				long id = rs.getLong("id");
+				String name = rs.getString("name");
+				String countrycode = rs.getString("countrycode");
+				String district = rs.getString("district");
+				int population = rs.getInt("population");
+
+				System.out.println(name);
+
+				City city = new City();
+				city.setId(id);
+				city.setName(name);
+				city.setCountryCode(countrycode);
+				city.setDistrict(district);
+				city.setPopulation(population);
+
+				cities.add(city);
 
 
+
+			}
+
+
+		} catch (SQLException e){
+			System.out.println( "problem connecting");
+
+		}
 
 		return null;
 	}

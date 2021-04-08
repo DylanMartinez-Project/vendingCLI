@@ -28,7 +28,6 @@ public class JDBCEmployeeDAOTest {
         dataSource.setPassword("postgres1");
         dataSource.setAutoCommit(false);
 
-
     }
 
     @AfterClass
