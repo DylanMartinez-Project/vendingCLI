@@ -24,24 +24,32 @@ public class JDBCEmployeeDAO implements EmployeeDAO {
 	public List<Employee> getAllEmployees() {
 
 		List <Employee> allEmployees = new ArrayList<Employee>();
-		String sql = "SELECT first_name, last_Name from employee";
+		String sql = "SELECT * from employee";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
 		while(results.next()) {
 
 			String first_name = results.getString("first_name");
 			String last_name = results.getString("last_name");
+			long employeeId = results.getLong("employee_id");
+			long departmentId = results.getLong("department_id");
 
 			Employee employee = new Employee();
 			employee.setFirstName(first_name);
 			employee.setLastName(last_name);
+			employee.setId(employeeId);
+			employee.setDepartmentId(departmentId);
+			employee.setGender(results.getString("gender").charAt(0));
+			if(results.getDate("birth_date") == null) {}
+			else {
+				employee.setBirthDay(results.getDate("birth_date").toLocalDate());
+			}
+			if(results.getDate("hire_date") == null) {}
+			else {
+				employee.setHireDate(results.getDate("hire_date").toLocalDate());
+			}
 
 			allEmployees.add(employee);
 		}
-
-
-
-
-
 
 		return allEmployees;
 	}
@@ -81,8 +89,6 @@ public class JDBCEmployeeDAO implements EmployeeDAO {
 			employee.setLastName(last_name);
 			allEmployees.add(employee);
 
-
-
 		}
 		return allEmployees;
 	}
@@ -105,7 +111,21 @@ public class JDBCEmployeeDAO implements EmployeeDAO {
 
 	@Override
 	public List<Employee> getEmployeesByProjectId(Long projectId) {
-		return new ArrayList<>();
+		List <Employee> allEmployees = new ArrayList<Employee>();
+		String sql = "select employee.employee_id, employee.first_name, employee.last_name from project_employee join employee on employee.employee_id = project_employee.employee_id where project_id = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sql,projectId);
+
+		while(results.next()){
+			String first_name = results.getString("first_name");
+			String last_name = results.getString("last_name");
+			Employee employee = new Employee();
+			employee.setFirstName(first_name);
+			employee.setLastName(last_name);
+			allEmployees.add(employee);
+
+
+		}
+		return allEmployees;
 	}
 
 	@Override
@@ -113,9 +133,6 @@ public class JDBCEmployeeDAO implements EmployeeDAO {
 
 		String sql = "UPDATE employee SET department_id = ? where employee_id = ?";
 		jdbcTemplate.update(sql,departmentId,employeeId);
-
-
-
 
 
 	}
