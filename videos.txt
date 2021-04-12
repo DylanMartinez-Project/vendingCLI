@@ -130,3 +130,7 @@ Passcode: LsM=0Ej9
 2-11 Review
 https://techelevator.zoom.us/rec/share/Sj7lG_Jphkg5BBFc1tYD9kFylZtEbctOwWGO0BjisSIrQjK69hcVNJvhY1b8IRcH.5lD3VpAeqTjBbkzI 
 Passcode: 9ilGLT@4
+
+2-12 Consuming GET Requests
+https://techelevator.zoom.us/rec/share/jZb3tl_E-o81jhOmOwEziSFsp5DbiXgWzrS6HKZysRLRccNSfzRkNa3uoHOlFVRP.dNIDanQoxGh_6aa4 
+Passcode: t%7$6jrk
