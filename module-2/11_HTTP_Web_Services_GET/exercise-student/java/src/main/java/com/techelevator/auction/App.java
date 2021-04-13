@@ -6,6 +6,8 @@ import com.techelevator.services.ConsoleService;
 
 public class App {
 
+//    private static final String API_BASE_URL = "http://localhost:3000/auctions";
+
     public static void main(String[] args) {
 
     	int menuSelection;
