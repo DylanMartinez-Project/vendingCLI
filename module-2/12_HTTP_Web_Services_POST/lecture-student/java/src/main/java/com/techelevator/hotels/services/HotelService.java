@@ -28,8 +28,17 @@ public class HotelService {
    * @return Reservation
    */
   public Reservation addReservation(String newReservation) {
+    Reservation reservation = makeReservation(newReservation);
+    System.out.println(reservation);
+
+    HttpHeaders headers = new HttpHeaders();
+    headers.setContentType(MediaType.APPLICATION_JSON);
+    HttpEntity<Reservation> entity = new HttpEntity<>(reservation,headers);
+
+    reservation = restTemplate.postForObject(BASE_URL + "hotels/" +  reservation.getHotelID() + "/reservations", entity, Reservation.class);
+
     // TODO: Implement method
-    return null;
+    return reservation;
   }
 
   /**
@@ -41,7 +50,16 @@ public class HotelService {
    */
   public Reservation updateReservation(String CSV) {
     // TODO: Implement method
-    return null;
+    Reservation reservation = makeReservation(CSV);
+
+    HttpHeaders headers = new HttpHeaders();
+    headers.setContentType(MediaType.APPLICATION_JSON);
+    HttpEntity<Reservation> entity = new HttpEntity<>(reservation, headers);
+
+    restTemplate.put(BASE_URL + "reservations/" + reservation.getId(),entity);
+
+
+    return reservation;
   }
 
   /**
@@ -50,7 +68,14 @@ public class HotelService {
    * @param id
    */
   public void deleteReservation(int id) {
-    // TODO: Implement method
+    try {
+
+      restTemplate.delete(BASE_URL + "pizzareservations/" + id);
+
+    } catch (RestClientResponseException e){
+      System.out.println(" PROBLEM WITH API END POINT BUDDY");
+      System.out.println( "CODE RECIEVED WAS : " + e.getRawStatusCode()+ "  :  " + e.getStatusText())  ;
+     }
   }
 
   /* DON'T MODIFY ANY METHODS BELOW */
