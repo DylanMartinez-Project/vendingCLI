@@ -6,7 +6,7 @@ public class Puppy {
 
 	private int id;
 	private String name;
-
+	@Max(value =200, message = "toooooo big")
 	private int weight;
 	private String gender;
 	private boolean paperTrained;

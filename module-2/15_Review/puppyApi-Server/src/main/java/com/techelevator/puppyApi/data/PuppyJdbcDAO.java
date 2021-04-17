@@ -46,12 +46,36 @@ public class PuppyJdbcDAO implements PuppyDAO {
 
 	@Override
 	public Puppy getPuppy(int id) {
-		return null;
+		String sql = "SELECT * FROM puppies where id = ?";
+		SqlRowSet  result = template.queryForRowSet(sql,id);
+		Puppy puppy = null;
+
+		if(result.next()){
+			int id2 = result.getInt("id");
+			String name = result.getString("name");
+			int weight = result.getInt("weight");
+			String gender = result.getString("gender");
+			boolean paperTrained = result.getBoolean("paper_trained");
+
+			puppy = new Puppy(id2,name,weight,gender,paperTrained);
+		}
+
+
+		return puppy;
 	}
 
 	@Override
 	public void savePuppy(Puppy puppyToSave) {
-		
+
+
+		String name = puppyToSave.getName();
+		int weight = puppyToSave.getWeight();
+		String gender = puppyToSave.getGender();
+		boolean paperTrained = puppyToSave.isPaperTrained();
+
+		String sql = "INSERT INTO puppies(name, weight, gender,paper_trained) VALUES(?, ?, ?, ?)";
+		template.update(sql,name,weight,gender,paperTrained);
+
 
 	}
 
