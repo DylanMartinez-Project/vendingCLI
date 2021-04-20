@@ -146,3 +146,7 @@ Passcode: Sm$6#h0e
 API Server Side Part II:
 https://techelevator.zoom.us/rec/share/zI99zu2qP3gZSmWJQFBqNFSoRqeCxNvdtJoERYMxyfHDsMEBgCNdQ0OGasDxuEdi.D_9dJZ1xi1HgoJp2 
 Passcode: ^iB!^6Du
+
+API Authentication:
+https://techelevator.zoom.us/rec/share/yCTj_0ZFvtISZBuxSxdiuD4aZBWe1Th-tIu5RrvnNP57pBPqCxCuASFJXEBl_msG.9c3-U93rsvw9Fbqo 
+Passcode: bzr.3+tw
