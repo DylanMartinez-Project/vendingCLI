@@ -1,0 +1,69 @@
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>SURVEY</title>
+        <link rel='stylesheet' href="styles.css"/>
+    </head>
+
+    <body>
+        <nav>
+            <a href='index.html'> BACK TO ALONZO </a>
+        </nav>
+
+        <main>
+            <h2>Are you better criminal than Alonzo Harris?</h2>
+
+            <form method ='POST' action ='http://localhost:8080/nsubmit'>
+               
+                <h2>Registration Form</h2>
+                <form method = 'POST' action ='http://localhost:8080/new-registration'>
+                    <p>
+                    <div>
+                        <label for="registrationName">Name:</label>
+                        <input id="registrationName" name="registrationName" type="text" required/>
+                    </div>
+                </p>
+                    <p>
+                    <div>
+                        <label for="email">Email Address:</label>
+                        <input id="email" name="email" type="email" required />
+                    </div>
+                </p>
+                <p>
+                    <div>
+                        <label for="dateofBirth">Date of Birth:</label>
+                        <input id="dateofBirth" name="dateofBirth" type="date" />
+                    </div>
+                </p>
+                <p>
+                    <div>
+                        <label for="favoritecolor">Favorite Color:</label>
+                        <input id="favoritecolor" name="favoritecolor" type="color" />
+                    </div>
+                </p>
+                    <div>
+                        <label for="favoritenumber">Favorite Number:</label>
+                        <input id="favoritenumber" name="favoritenumber" type="number" />
+                    </div>
+                <p>
+                    <div>
+                        <label for="check">Confirm this is correct:</label>
+                        <input id="check" name="check" type="checkbox" />
+                    </div>
+                </p>
+                    <div>
+                        <input type="submit" />
+                </form>
+
+    
+            </form>
+
+        </main>
+    </body>
+
+
+
+
+
+</html>
