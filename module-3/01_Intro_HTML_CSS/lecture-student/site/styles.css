@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     font-family: Arial, Helvetica, sans-serif;
 
@@ -13,4 +14,20 @@ h1{
 }
 table{
     
+=======
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    height: 200px;
+}
+
+/*
+Comments Comments Comments
+*/
+h1 {
+    font-size: 32px;
+    color: cornflowerblue;
+>>>>>>> 615f622d6c881a6e626793e0a963a5e2462121b6
 }
