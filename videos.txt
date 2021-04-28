@@ -162,3 +162,7 @@ Passcode: .UY0G+7i
 3-1 HTML & CSS Review:
 https://techelevator.zoom.us/rec/share/ajjVd9hFYeMaaGdwumZEcw5y63HnzWzkT8C8kINxrVZXsqG4kJdmO5zfcCRc4kVJ.lvNMG7eeZLBYZhlY 
 Passcode: j7v8c^n$
+
+3-2 CSS Selectors:
+https://techelevator.zoom.us/rec/share/3XbcUVRRhGyGqsPOth8vQ3wOz8PUljrVq3bZ0-5u_ZSG-gvm6fICuKLHlprKxd4g._TpQar9Ib65iWzkI 
+Passcode: qg25$TSv
