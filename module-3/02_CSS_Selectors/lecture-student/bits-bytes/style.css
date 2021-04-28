@@ -1,0 +1,59 @@
+html{
+    font-size: 12px;
+}
+
+body{
+    background-color: rgb(192,192,192,0.8);
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    height: 150px;
+}
+
+
+.banner {
+    width: 800px;
+}
+
+aside{
+    position: fixed;
+    width: 200px;
+    border-right: 1px dotted rgba(219,135,8,0.4);
+    height: 100vh;
+    padding-left: 20px;
+}
+
+aside li{
+
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: oldlace;
+    margin: 10px;
+
+}
+
+aside li a{
+    font-weight: bold;
+    color:yellow ;
+}
+
+aside li a:hover{
+    text-decoration: underline;
+
+}
+
+section div{
+    display: inline-block;
+    width: 33%;
+    margin: 20px;
+    vertical-align: top;
+}
+main{
+    margin-left: 300px;
+}
