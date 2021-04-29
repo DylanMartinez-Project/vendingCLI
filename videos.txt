@@ -170,3 +170,7 @@ Passcode: qg25$TSv
 3-3 CSS Grid:
 https://techelevator.zoom.us/rec/share/Nt0fVsEfE8DDSoFRkYmNlxJCNHbEiVVWOtyctyGUwuNse3wIYlkJZsmCzVRZ9m5r.O8G7sUoIknUe3uw9 
 Passcode: ege*ZM=9
+
+3-4 CSS Flexbox:
+https://techelevator.zoom.us/rec/share/g_EtTHQk2DlQMn6gw2x_SG4YUgLnEKlIA-wX9jt74nQ40UE0RTs8F_TZD2NOzbKH.I19wdMFDyOtqfJ7I 
+Passcode: om56i8T=
