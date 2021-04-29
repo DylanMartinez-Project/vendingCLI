@@ -166,3 +166,7 @@ Passcode: j7v8c^n$
 3-2 CSS Selectors:
 https://techelevator.zoom.us/rec/share/3XbcUVRRhGyGqsPOth8vQ3wOz8PUljrVq3bZ0-5u_ZSG-gvm6fICuKLHlprKxd4g._TpQar9Ib65iWzkI 
 Passcode: qg25$TSv
+
+3-3 CSS Grid:
+https://techelevator.zoom.us/rec/share/Nt0fVsEfE8DDSoFRkYmNlxJCNHbEiVVWOtyctyGUwuNse3wIYlkJZsmCzVRZ9m5r.O8G7sUoIknUe3uw9 
+Passcode: ege*ZM=9
