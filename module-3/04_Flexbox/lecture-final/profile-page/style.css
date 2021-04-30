@@ -1,0 +1,45 @@
+img {
+    width: 350px;
+}
+
+body {
+    display: flex;
+}
+
+#left-side {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    flex-basis: 20%;
+}
+
+#right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 80%;
+}
+
+footer .socials {
+
+    display: flex;
+    list-style: none;
+    margin: 20px;
+    justify-content: space-evenly;
+}
+
+footer {
+    width: 500px;
+}
+
+.socials {
+    padding-left: 0px;
+}
+
+
+@media(max-width: 500px) {
+    body {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
