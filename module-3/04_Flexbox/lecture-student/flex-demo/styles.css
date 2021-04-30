@@ -8,9 +8,39 @@ section {
 
 #box1 {
     background-color: burlywood;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 150px;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 #box2 {
     background-color: blueviolet;
+    display:flex;
+    flex-direction: column;
+
+    height: 500px;
+    width: 150px;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
+#box3{
+    background-color: yellow;
+    display: flex;
+    
+
+}
+
+#box3 span{
+    background-color: grey;
+    margin: 15px;
+    flex-basis: 200px;
+}
+
+#box3 span:nth-of-type(3){
+    background-color: pink;
+    flex-basis: 400px;
+}

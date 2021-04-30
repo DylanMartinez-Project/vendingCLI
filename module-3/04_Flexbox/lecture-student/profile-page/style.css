@@ -1,0 +1,26 @@
+img{
+    width: 350px;
+}
+
+body{
+    display: flex;
+}
+
+#left-side{
+    display:flex;
+    flex-direction: column;
+    flex-basis: 20%
+}
+
+#right-side{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  flex-basis: 80%;
+
+}
+
+footer .socials{
+    display: flex;
+    list-style: none;
+}
