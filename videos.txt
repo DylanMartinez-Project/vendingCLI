@@ -178,3 +178,7 @@ Passcode: om56i8T=
 3-5 Review:
 https://techelevator.zoom.us/rec/share/O0e_B8qsCkrjrPcXZECYCadLibzO435BimI07fU6pAt_zrahKth0oXK1iVGS8Wti.HlOSBdMUhEhdyiak 
 Passcode: 0+R0.6Kz
+
+3-6 Intro to JS:
+https://techelevator.zoom.us/rec/share/qXLkOGimiGlquQQrjeMWRhDotePlzeK_g_NfV3PAJb2KBYd6bIph4MMIJigxqt14.YXaWDloAGPFMDP_U 
+Passcode: 0%1y?zgp
