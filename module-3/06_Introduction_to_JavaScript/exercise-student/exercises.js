@@ -5,24 +5,41 @@
 		sumDouble(1, 2) → 3
 		sumDouble(3, 2) → 5
 		sumDouble(2, 2) → 8
-
+*/
 		function sumDouble(x, y) {
 			// do logic here
 			// return result;
+
+			if(x===y){
+				return 2 *(x+y)
+			}
 			return x + y;
         }
-*/
+
 
 /*
 2. **hasTeen** We'll say that a number is "teen" if it is in the range 13..19 inclusive. 
     Given 3 int values, return true if 1 or more of them are teen.
-
+	
 		hasTeen(13, 20, 10) → true
 		hasTeen(20, 19, 10) → true
 		hasTeen(20, 10, 13) → true
 */
+		function hasTeen(a,b,c){
+		const numbers = [a,b,c];
 
-/* 
+		for (let i=0; i < numbers.length; i++){
+			if (numbers[i] >= 13 && numbers[i] <=19){
+				return true;
+			}
+		}
+		return false;
+
+
+
+	}
+
+/*
 3. **lastDigit** Given two non-negative int values, return true if they have the same 
     last digit, such as with 27 and 57.
 
@@ -30,15 +47,40 @@
 		lastDigit(6, 17) → false
 		lastDigit(3, 113) → true
 */
+		function lastDigit(first, second){
+		const firstStr = first.toString();
+		const secondStr = second.toString();
+		const firstStrLast = firstStr.charAt(firstStr.length-1);
+		const secondStrLast = secondStr.charAt(secondStr.length-1);
 
+		if(firstStrLast===secondStrLast){
+			return true;
+		}
+			return false;
+
+		}
 /*
+
 4. **seeColor** Given a string, if the string begins with "red" or "blue" return that color 
     string, otherwise return the empty string.
 
 		seeColor("redxx") → "red"
 		seeColor("xxred") → ""
         seeColor("blueTimes") → "blue"
+
 */
+			function seeColor(str){
+				
+
+			if(str.substring(0,3)=== "red"){
+						return str.substring(0,3);
+					} else if (str.substring(0,4)=== "blue"){
+						return str.substring(0,4);
+					} else {
+						return "";
+			}
+		}
+
 
 /*
 5. **oddOnly** Write a function that given an array of integer of any length, filters out 
@@ -47,17 +89,32 @@
 		oddOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) → [1, 3, 5, 7, 9, 11];
 		oddOnly([2, 4, 8, 32, 256]); → []
 */
+			function oddOnly(x){
+				let oddArray = []
+				for (i = 0; i < x.length; i++){
+					if(x[i]%2 == 1){
+						oddArray.push[i];
+						return oddArray;
+					}
+					return oddArray;
+				}
 
-/*
+
+
+
+			}
+
+
+/*		
 6. **frontAgain** Given a string, return true if the first 2 chars in the string also appear 
     at the end of the string, such as with "edited".
 
 		frontAgain("edited") → true
 		frontAgain("edit") → false
 		frontAgain("ed") → true
-*/
 
-/*
+
+
 7. **cigarParty** When squirrels get together for a party, they like to have cigars. 
 A squirrel party is successful when the number of cigars is between 40 and 60, inclusive. 
 Unless it is the weekend, in which case there is no upper bound on the number of cigars. 

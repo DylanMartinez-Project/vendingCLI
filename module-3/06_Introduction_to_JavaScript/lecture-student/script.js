@@ -3,11 +3,37 @@
  * They don't have a return type and the naming convention is camel-case.
  */
 function variables() {
+
+
+console.log('Hello World!');
+
+
+
   // Declares a variable where the value cannot be changed
+
+  const daysPerWeek = 7;
+  console.log('There are ${daysPerWeek} days in the week' );
 
   // Declares a variable those value can be changed
 
+  let name = 'Soda';
+  console.log(name);
+  name = 'dylan';
+  console.log(name);
+  
+
   // Declares a variable that will always be an array
+
+  const weekdays = ['mon', 'friday']
+  console.table(weekdays);
+
+
+  for (let i = 0; i <weekdays.length; i++){
+    console.log(`Day ${i+1} is ${weekdays[i]}`);
+  }
+
+
+  l
 
 }
 
@@ -26,6 +52,17 @@ function printParameters(param1, param2) {
  * Conditional statements are similar to those in other languages.
  */
 function fizzBuzz(testNumber) {
+  if(testNumber%15 ==0){
+    console.log("FizzBuz");
+  }
+  else if (testNumber%3 == 0){
+    console.log("Fizz");
+  } else if(testNumber%5 ==0){
+    console.log("Buzz");
+  }
+  else{
+    console.log(testNumber);
+  }
 
 
 }
@@ -41,7 +78,11 @@ function fizzBuzz(testNumber) {
  * @param {Object} y
  */
 function equality(x, y) {
+console.log('x is a ${typeof x}')
+console.log('y is a ${typeof y}')
 
+console.log('x == y: ${x==y}')
+console.log('x == y: ${x===y}')
 }
 
 /**
@@ -52,7 +93,10 @@ function equality(x, y) {
  */
 function falsy(x) {
 
-}
+  if(x){
+console.log('${x} is truthy')
+
+} else console.log('${x} is falsy')
 
 /**
  *  Objects are simple key-value pairs
@@ -129,6 +173,16 @@ function stringFunctions(value) {
   console.log(`.startsWith('Hello') - ${value.startsWith("Hello")}`);
   console.log(`.indexOf('Hello') - ${value.indexOf("Hello")}`);
 
+
+
+
+  let extractedWord = value.substring(0,5);
+  console.log(extractedWord);
+
+  let firstLetter = value.charAt(value.length - 1)
+  console.log(firstLetter)
+  console.log(lastName)
+
   /*
     Other Methods
         - split(string)
@@ -138,4 +192,4 @@ function stringFunctions(value) {
         - trim()
         - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
     */
-}
+}}
