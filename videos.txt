@@ -182,3 +182,7 @@ Passcode: 0+R0.6Kz
 3-6 Intro to JS:
 https://techelevator.zoom.us/rec/share/qXLkOGimiGlquQQrjeMWRhDotePlzeK_g_NfV3PAJb2KBYd6bIph4MMIJigxqt14.YXaWDloAGPFMDP_U 
 Passcode: 0%1y?zgp
+
+3-7 JS Functions:
+https://techelevator.zoom.us/rec/share/Ej-3KBarpMz620zyTGu2RGouccS4M66VyNCnLMMURRhzep07mUbe_oMAbl8hjnL7.MRTtfIW7D4Zzs2ef 
+Passcode: L&5De?x$
