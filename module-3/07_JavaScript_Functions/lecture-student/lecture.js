@@ -28,6 +28,10 @@ function printToConsole(value) {
  * @param {number} secondParameter the second parameter to multiply
  */
 
+function multiplyTogether(firstParameter, secondParameter){
+  return firstParameter*secondParameter;
+}
+
 
 /**
  * This version makes sure that no parameters are ever missing. If
@@ -40,6 +44,10 @@ function printToConsole(value) {
  * @param {number} [secondParameter=0] the second parameter to multiply
  */
 
+function multiplyNoUndefined(firstParameter= 0, secondParameter=0){
+  return firstParameter*secondParameter;
+}
+
 
 /**
  * Functions can return earlier before the end of the function. This could be useful
@@ -51,15 +59,23 @@ function printToConsole(value) {
  * @param {number} firstParameter the first parameter
  * @param {number} secondParameter the second parameter
  */
-
+function returnBeforeEnd(firstParameter,secondParameter){
+  if (firstParameter==0){
+    console.log('returning second para, times 2');
+    return secondParameter*2;
+  }
+  console.log('returning the sum instead')
+  return firstParameter + secondParameter;
+}
 
 
 /**
  * We can use the following technique to extract an unknown number of parameters:
  *
  */
-
-
+function doSomethingCrazy(){
+console.log(arguments);
+}
 
 /**
  * Scope is defined as where a variable is available to be used.
@@ -68,6 +84,18 @@ function printToConsole(value) {
  * that block and any block underneath it. Once the block that the
  * variable was defined in ends, the variable disappears.
  */
+
+function scopeTest(){
+let inScopeInScopeTest = true;
+{
+let scopedToBlock = inScopeInScopeTest;
+
+}
+console.log(inScopeInScopeTest);
+console.log(scopedToBlock);
+
+}
+
 
 
 
@@ -81,7 +109,26 @@ function printToConsole(value) {
  */
 function sumAllNumbers(numbersToSum) {
 
+// let total = 0
+
+// for(let i=0; i < numbersToSum.length; i++){
+
+//   total += numbersToSum[i];
+// }
+
+// return total;
+
+// 
+
+// let total = numbersToSum.reduce(addNumbers);
+// return total;
+
+let total = numbersToSum.reduce( (a,b) => {return a +b;}   );
+
+  return total;
 }
+
+
 
 function addNumbers(sum, number) {
   return sum + number;

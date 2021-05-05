@@ -91,50 +91,90 @@
 */
 			function oddOnly(x){
 				let oddArray = []
-				for (i = 0; i < x.length; i++){
+				for (let i = 0; i < x.length; i++){
 					if(x[i]%2 == 1){
-						oddArray.push[i];
-						return oddArray;
+						oddArray.push(x[i]);
+						
 					}
-					return oddArray;
+					
 				}
-
+				return oddArray;
 
 
 
 			}
 
 
-/*		
-6. **frontAgain** Given a string, return true if the first 2 chars in the string also appear 
-    at the end of the string, such as with "edited".
 
-		frontAgain("edited") → true
-		frontAgain("edit") → false
-		frontAgain("ed") → true
+// 6. **frontAgain** Given a string, return true if the first 2 chars in the string also appear 
+//     at the end of the string, such as with "edited".
+
+// 		frontAgain("edited") → true
+// 		frontAgain("edit") → false
+// 		frontAgain("ed") → true
+
+		function frontAgain(myStr){
+			if(myStr.length==2){
+				return true;
+			} else if(myStr.substring(0,1) == myStr.substring(myStr.length - 2, myStr.length - 1)){
+				return true;
+			} else {
+				return false
+			}
+
+
+		}
 
 
 
-7. **cigarParty** When squirrels get together for a party, they like to have cigars. 
-A squirrel party is successful when the number of cigars is between 40 and 60, inclusive. 
-Unless it is the weekend, in which case there is no upper bound on the number of cigars. 
-Write a squirrel party function that return true if the party with the given values is successful, 
-or false otherwise.
+// 7. **cigarParty** When squirrels get together for a party, they like to have cigars. 
+// A squirrel party is successful when the number of cigars is between 40 and 60, inclusive. 
+// Unless it is the weekend, in which case there is no upper bound on the number of cigars. 
+// Write a squirrel party function that return true if the party with the given values is successful, 
+// or false otherwise.
 
-		cigarParty(30, false) → false
-		cigarParty(50, false) → true
-		cigarParty(70, true) → true
-*/
+		// cigarParty(30, false) → false
+		// cigarParty(50, false) → true
+		// cigarParty(70, true) → true
 
-/*
-8. **fizzBuzz** Because you know you can't live without it, FizzBuzz.
 
-		fizzBuzz(3) → "Fizz"
-		fizzBuzz(1) → 1
-		fizzBuzz(10) → "Buzz"
-		fizzBuzz(15) → "FizzBuzz"
-		fizzBuzz(8) → 8
-*/
+
+		function cigarParty(cigar, weekend) {
+    if (weekend == true) {
+        if (cigar >= 40) {
+            return true;
+        }
+    } else if (weekend == false) {
+        if (cigar >= 40 && cigar <= 60) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+
+
+// // 
+// 8. **fizzBuzz** Because you know you can't live without it, FizzBuzz.
+
+// 		fizzBuzz(3) → "Fizz"
+// 		fizzBuzz(1) → 1
+// 		fizzBuzz(10) → "Buzz"
+// 		fizzBuzz(15) → "FizzBuzz"
+// 		fizzBuzz(8) → 8
+// */
+function fizzBuzz(myNum) {
+    if (myNum % 15 == 0) {
+        return "FizzBuzz";
+    } else if (myNum % 3 == 0) {
+        return "Fizz";
+    } else if (myNum % 5 == 0) {
+        return "Buzz";
+    } else {
+        return myNum;
+    }
+}
 
 /*
 9. **filterEvens** Write a function that filters an array to only include even numbers.
@@ -144,7 +184,15 @@ or false otherwise.
 	filterEvens([2, 4, 6]) → [2, 4, 6]
 	filterEvens([100, 8, 21, 24, 62, 9, 7]) → [100, 8, 24, 62]
 */
-
+function filterEvens(myArr) {
+    let newArr = [];
+    for (let i = 0; i < myArr.length; i++) {
+        if (myArr[i]%2 == 0) {
+            newArr.push(myArr[i]);
+        }
+    }
+    return newArr;
+}
 /*
 10. **filterBigNumbers** Write a function that filters numbers greater than or equal to 100.
 
@@ -152,7 +200,16 @@ or false otherwise.
 	filterBigNumbers([3, 2, 7, 1, -100, -120]) → []
 	filterBigNumbers([]) → []
 */
+function filterBigNumbers(myArr) {
 
+let newArr = [];
+for (let i = 0; i < myArr.length; i++) {
+	if (myArr[i] >= 100) {
+		newArr.push(myArr[i]);
+	}
+}
+return newArr;
+}
 /*
 11. **filterMultiplesOfX** Write a function to filter numbers that are a multiple of a 
 parameter, `x` passed in.
@@ -160,7 +217,15 @@ parameter, `x` passed in.
 	filterMultiplesOfX([3, 5, 1, 9, 18, 21, 42, 67], 3) → [3, 9, 18, 21, 42]
 	filterMultiplesOfX([3, 5, 10, 20, 18, 21, 42, 67], 5) → [5, 10, 20]
 */
-
+function filterMultiplesOfX(myArr, x) {
+    let newArr = [];
+    for (let i = 0; i < myArr.length; i++) {
+        if (myArr[i] % x == 0) {
+        newArr.push(myArr[i]);
+        }
+    }
+    return newArr;
+}
 /*
 12. **createObject** Write a function that creates an object with a property called 
 firstName, lastName, and age. Populate the properties with your values.
@@ -172,4 +237,13 @@ firstName, lastName, and age. Populate the properties with your values.
 		lastName,
 		age
 	}
+	
 */
+function createObject() {
+    const result = {
+    firstName:"dilly",
+    lastName:"M",
+    age:26,
+    }
+    return result;
+}
