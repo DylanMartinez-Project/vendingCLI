@@ -186,3 +186,7 @@ Passcode: 0%1y?zgp
 3-7 JS Functions:
 https://techelevator.zoom.us/rec/share/Ej-3KBarpMz620zyTGu2RGouccS4M66VyNCnLMMURRhzep07mUbe_oMAbl8hjnL7.MRTtfIW7D4Zzs2ef 
 Passcode: L&5De?x$
+
+3-8 JS DOM:
+https://techelevator.zoom.us/rec/share/eoOUI_OXEQH_CCNx2dBiHflsSTvKiaTNtXLnvI59W01n8efmWSu-NN0W1CM9cPbR.PY6vgkW-KhacXNw- 
+Passcode: A?22SGAt
