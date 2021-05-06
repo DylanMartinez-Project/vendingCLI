@@ -62,7 +62,9 @@ function displayReview(review) {
 
 document.addEventListener('DOMContentLoaded', 
   () => {
-
+setPageTitle();
+setPageDescription
+displayReviews();
   }
 );
 
@@ -70,9 +72,50 @@ document.addEventListener('DOMContentLoaded',
  * I will show / hide the add review form
  */
 
+function showHideForm(){
+
+const form = document.getElementById('form');
+const btn = document.getElementById('btnToggleForm');
+
+if(form.classList.contains('d-none')){
+  form.classList.remove('d-none');
+  btn.innerText= 'hide form'
+} else{
+
+
+}
+
+
+}
+
+
+
+
 /**
  * I will reset all of the values in the form.
  */
+
+function resetFormValues(){
+const form = document.querySelector('form');
+const inputs = form.querySelectorAll('input');
+
+inputs.forEach(
+  (input) => {
+    input.value = '';
+  }
+);
+
+const ratingBox = document.getElementById('rating');
+ratingBox.value = 1;
+
+const textInput = document.getElementById('review');
+textInput.value= '';
+
+
+}
+
+
+
 
 /**
  * I will save the review that was added using the add review from

@@ -13,6 +13,44 @@ const groceries = [
   { id: 10, name: 'Tea', completed: false }
 ];
 
+document.addEventListener('DOMContentLoaded', () => {
+  setPageTitle();
+  displayGroceries();
+
+
+const tasks = document.querySelectorAll('li');
+
+tasks.forEach((task) => {
+  // one click
+  task.addEventListener('click', () => {
+    if (!task.classList.contains('completed')) {
+      task.classList.add('completed');
+      task.querySelector('i').classList.add('completed');
+    }
+
+  });
+
+  task.addEventListener(
+    'dblclick',()=>{
+      if(task.classList.contains('completed')){
+        task.classList.remove('completed');
+        task.querySelector('i').classList.remove('completed');
+      }
+    }
+  );
+
+
+
+
+
+  
+
+}); 
+
+
+
+
+});
 /**
  * This function will get a reference to the title and set its text to the value
  * of the pageTitle variable that was set above.
