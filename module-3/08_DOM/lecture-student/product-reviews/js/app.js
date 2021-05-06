@@ -37,14 +37,16 @@ const reviews = [
  * once you have the element you can add the product name to the span.
  */
 function setPageTitle() {
-
+  const pageTitle = document.getElementById('page-title');
+  pageTitle.querySelector('.name').innerText = name;
 }
 
 /**
  * Add our product description to the page.
  */
 function setPageDescription() {
-
+  const pageDescription = document.querySelector('.description');
+  pageDescription.innerText = description;
 }
 
 /**
@@ -53,6 +55,53 @@ function setPageDescription() {
  * to create the elements needed for our markup and add them to the DOM
  */
 function displayReviews() {
+  const main = document.getElementById('main');
+
+  reviews.forEach(
+
+    (review) => {
+    
+      const container = document.createElement('div');
+      container.setAttribute('class', 'review');
+      const reviewer = document.createElement('h4');
+      reviewer.innerText = review.reviewer;
+      container.appendChild(reviewer);
+
+      const rating = document.createElement('div');
+
+      // rating.innerText = review.rating;
+      rating.setAttribute('class', 'rating');
+      for (let i = 0; i < review.rating; i++){
+        const star = document.createElement('img')
+        star.setAttribute('class', 'ratingStar')
+        star.src = 'img/star.png';
+        rating.appendChild(star)
+      }
+
+
+      container.appendChild(rating);
+
+    
+
+
+      const title = document.createElement('h3');
+      title.innerText = review.title;
+      container.appendChild(title);
+
+
+      const reviewText = document.createElement('p');
+      reviewText.innerText = review.review;
+      container.appendChild(reviewText);
+
+      main.appendChild(container);
+
+    }
+
+
+
+
+
+  );
 
 }
 // set the product reviews page title
