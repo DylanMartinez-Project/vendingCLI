@@ -1,0 +1,19 @@
+div {
+    padding: 20px;
+    margin: 20px;
+}
+
+#l1 {
+    background-color: aquamarine;
+    width: 500px;
+}
+
+#l2 {
+    background-color: burlywood;
+    width: 400px;
+}
+
+#l3 {
+    background-color:maroon;
+    width: 300px;
+}
