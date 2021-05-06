@@ -190,3 +190,7 @@ Passcode: L&5De?x$
 3-8 JS DOM:
 https://techelevator.zoom.us/rec/share/eoOUI_OXEQH_CCNx2dBiHflsSTvKiaTNtXLnvI59W01n8efmWSu-NN0W1CM9cPbR.PY6vgkW-KhacXNw- 
 Passcode: A?22SGAt
+
+3-9 JS Event Handling:
+https://techelevator.zoom.us/rec/share/b7qLA2EZMqkQ8FY_zEn2iN2URWmRfl_nOiyZS3sVLYf1n9y2pZdpycPS_ZfVahlr.KXXel_idGkGGS9NO 
+Passcode: 81VpU+hr
