@@ -40,10 +40,10 @@ tasks.forEach((task) => {
   );
 
 
+const markCompleted = document,getElementById('toggleAll')
 
 
 
-  
 
 }); 
 
