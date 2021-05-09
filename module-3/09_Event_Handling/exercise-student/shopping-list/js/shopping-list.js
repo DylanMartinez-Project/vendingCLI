@@ -40,13 +40,9 @@ tasks.forEach((task) => {
   );
 
 
-const markCompleted = document,getElementById('toggleAll')
-
-
-
-
-}); 
-
+  const markCompleted = document.getElementById('toggleAll');
+  markCompleted.addEventListener('click', () => { markCompleteOrIncomplete();});
+  });
 
 
 
