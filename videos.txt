@@ -198,3 +198,7 @@ Passcode: 81VpU+hr
 3-10 Review:
 https://techelevator.zoom.us/rec/share/VgHunlrL8zskTUOsXIry5Ptd3f2pikDOd_0buDmnYAYb4f23nQAMKGmH3Mk2UOxo.5YCpg5bYa2ky8SkO 
 Passcode: L?&qX4a^
+
+3-11 Intro to VUE and VUE Binding:
+https://techelevator.zoom.us/rec/share/5byVh9b2jm1Mx4lJc1rjKMCdyfmlbWXMJrlywbMgWeOn1wOyB84e1jUx8zremoaq.d2JLAY2vXo3h5DMG 
+Passcode: Ht1W+pi*
