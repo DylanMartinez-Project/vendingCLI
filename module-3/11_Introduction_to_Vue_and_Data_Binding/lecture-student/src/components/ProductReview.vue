@@ -7,39 +7,47 @@
 
     <div class="well-display">
       <div class="well">
-        <span class="amount"></span>
+        <span class="amount"> {{averageRating}}</span>
         Average Rating
       </div>
 
       <div class="well">
-        <span class="amount"></span>
+        <span class="amount">{{numberOfOneStarReviews}}</span>
         1 Star Review
       </div>
 
       <div class="well">
-        <span class="amount"></span>
+        <span class="amount">{{numberOfTwoStarReviews}}</span>
         2 Star Review
       </div>
 
       <div class="well">
-        <span class="amount"></span>
+        <span class="amount">{{numberOfThreeStarReviews}}</span>
         3 Star Review
       </div>
 
       <div class="well">
-        <span class="amount"></span>
+        <span class="amount">{{numberOfFourStarReviews}}</span>
         4 Star Review
       </div>
 
       <div class="well">
-        <span class="amount"></span>
+        <span class="amount">{{numberOfFiveStarReviews}}</span>
         5 Star Review
       </div>
     </div>
 
     <div
       class="review"
+      v-for="review in reviews"
+      v-bind:key='review.id'
+      v-bind:class='{favorited: review.favorited}'
     >
+
+    <h3>{{review.title}} </h3>
+    <p>{{review.review}}</p>
+
+    <input type='checkbox' v-model="review.favorited"/>
       <!--Loop through review data-->
     </div>
   </div>
@@ -83,38 +91,81 @@ export default {
           reviewer: "Gary Vaynerchuk",
           title: "And I thought I could write",
           review:
-            "There are a lot of good, solid tips in this book. I don't want to ruin it, but prelighting all the cigars is worth the price of admission alone.",
+            "There are atechelevator1 lot of good, solid tips in this book. I don't want to ruin it, but prelighting all the cigars is worth the price of admission alone.",
           rating: 3,
-          favorited: false
+          favorited: true
         }
       ]
     };
   },
   computed: {
     averageRating() {
-
-      return 0;
+      let sum = 0;
+      for(let i = 0; i <this.reviews.length; i++){
+        sum += this.reviews[i].rating;
+      }
+      return sum/this.reviews.length;
 
     },
     numberOfOneStarReviews() {
 
-      return 0;
+      let count = 0;
+      this.reviews.forEach(
+        (review) => {
+          if (review.rating === 1) {
+            count++;
+          }
+        }
+      );
+      return count;
     },
-    numberOfTwoStarReviews() {
 
-      return 0;
+    numberOfTwoStarReviews() {
+let count = 0;
+      this.reviews.forEach(
+        (review) => {
+          if (review.rating === 2) {
+            count++;
+          }
+        }
+      );
+      return count;
     },
     numberOfThreeStarReviews() {
 
-      return 0;
+     let count = 0;
+      this.reviews.forEach(
+        (review) => {
+          if (review.rating === 3) {
+            count++;
+          }
+        }
+      );
+      return count;
     },
     numberOfFourStarReviews() {
 
-      return 0;
+      let count = 0;
+      this.reviews.forEach(
+        (review) => {
+          if (review.rating === 4) {
+            count++;
+          }
+        }
+      );
+      return count;
     },
     numberOfFiveStarReviews() {
 
-      return 0;
+      let count = 0;
+      this.reviews.forEach(
+        (review) => {
+          if (review.rating === 5) {
+            count++;
+          }
+        }
+      );
+      return count;
     }
   }
 };
