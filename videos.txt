@@ -202,3 +202,7 @@ Passcode: L?&qX4a^
 3-11 Intro to VUE and VUE Binding:
 https://techelevator.zoom.us/rec/share/5byVh9b2jm1Mx4lJc1rjKMCdyfmlbWXMJrlywbMgWeOn1wOyB84e1jUx8zremoaq.d2JLAY2vXo3h5DMG 
 Passcode: Ht1W+pi*
+ 
+3-12 VUE Event Handling:
+https://techelevator.zoom.us/rec/share/211vLAczeiBhE9SjBciOi0h8e6psvkJCgqtw5kAOLl4m5HSusOQ4S_ly8swqsEo.7y06OeHbbjHfC9qH 
+Passcode: fF&bR2je
