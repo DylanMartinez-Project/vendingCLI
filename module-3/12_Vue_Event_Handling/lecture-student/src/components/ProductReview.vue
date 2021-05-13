@@ -13,45 +13,42 @@
       <div class="well">
         <!--Add an event handler to change the filter value-->
         <span class="amount">{{ numberOfOneStarReviews }}</span>
-        1 Star Review{{ numberOfOneStarReviews === 1 ? '' : 's' }}
+        1 Star Review{{ numberOfOneStarReviews === 1 ? "" : "s" }}
       </div>
 
       <div class="well">
         <!--Add an event handler to change the filter value-->
         <span class="amount">{{ numberOfTwoStarReviews }}</span>
-        2 Star Review{{ numberOfTwoStarReviews === 1 ? '' : 's' }}
+        2 Star Review{{ numberOfTwoStarReviews === 1 ? "" : "s" }}
       </div>
 
       <div class="well">
         <!--Add an event handler to change the filter value-->
         <span class="amount">{{ numberOfThreeStarReviews }}</span>
-        3 Star Review{{ numberOfThreeStarReviews === 1 ? '' : 's' }}
+        3 Star Review{{ numberOfThreeStarReviews === 1 ? "" : "s" }}
       </div>
 
       <div class="well">
-         <!--Add an event handler to change the filter value-->
+        <!--Add an event handler to change the filter value-->
         <span class="amount">{{ numberOfFourStarReviews }}</span>
-        4 Star Review{{ numberOfFourStarReviews === 1 ? '' : 's' }}
+        4 Star Review{{ numberOfFourStarReviews === 1 ? "" : "s" }}
       </div>
 
       <div class="well">
         <!--Add an event handler to change the filter value-->
         <span class="amount">{{ numberOfFiveStarReviews }}</span>
-        5 Star Review{{ numberOfFiveStarReviews === 1 ? '' : 's' }}
+        5 Star Review{{ numberOfFiveStarReviews === 1 ? "" : "s" }}
       </div>
     </div>
 
     <!--Add an event handler to toggle the form's visibility-->
-    <a
-      id="show-form-button"
-      href="#"
+    <a id="show-form-button"
+     href="#" v-on:click.prevent='showForm=true' v-if="showForm === false">
+     Show Form</a>
 
-      v-if="showForm === false"
-      >Show Form</a
-    >
 
     <!--Add an event handler for form submission-->
-    <form v-if="showForm === true">
+    <form v-if="showForm === true" v-on:submit.prevent='addNewReview'>
       <div class="form-element">
         <label for="reviewer">Name:</label>
         <input id="reviewer" type="text" v-model="newReview.reviewer" />
@@ -74,10 +71,10 @@
         <label for="review">Review:</label>
         <textarea id="review" v-model="newReview.review"></textarea>
       </div>
-      <input type="submit" value="Save">
+      <input type="submit" value="Save" />
 
       <!--Add an event handler, to call a method to cancel form submission.-->
-      <input type="button" value="Cancel">
+      <input type="button" value="Cancel" v-on:click.prevent='resetForm'>
     </form>
 
     <div
@@ -110,49 +107,49 @@
 
 <script>
 export default {
-  name: 'product-review',
+  name: "product-review",
   data() {
     return {
-      name: 'Cigar Parties for Dummies',
+      name: "Cigar Parties for Dummies",
       description:
-        'Host and plan the perfect cigar party for all of your squirrelly friends.',
+        "Host and plan the perfect cigar party for all of your squirrelly friends.",
       newReview: {},
       showForm: false,
       filter: 0,
       reviews: [
         {
-          reviewer: 'Malcolm Gladwell',
-          title: 'What a book!',
+          reviewer: "Malcolm Gladwell",
+          title: "What a book!",
           review:
             "It certainly is a book. I mean, I can see that. Pages kept together with glue and there's writing on it, in some language.",
           rating: 3,
-          favorited: false
+          favorited: false,
         },
         {
-          reviewer: 'Tim Ferriss',
-          title: 'Had a cigar party started in less than 4 hours.',
+          reviewer: "Tim Ferriss",
+          title: "Had a cigar party started in less than 4 hours.",
           review:
             "It should have been called the four hour cigar party. That's amazing. I have a new idea for muse because of this.",
           rating: 4,
-          favorited: false
+          favorited: false,
         },
         {
-          reviewer: 'Ramit Sethi',
-          title: 'What every new entrepreneurs needs. A door stop.',
+          reviewer: "Ramit Sethi",
+          title: "What every new entrepreneurs needs. A door stop.",
           review:
             "When I sell my courses, I'm always telling people that if a book costs less than $20, they should just buy it. If they only learn one thing from it, it was worth it. Wish I learned something from this book.",
           rating: 1,
-          favorited: false
+          favorited: false,
         },
         {
-          reviewer: 'Gary Vaynerchuk',
-          title: 'And I thought I could write',
+          reviewer: "Gary Vaynerchuk",
+          title: "And I thought I could write",
           review:
             "There are a lot of good, solid tips in this book. I don't want to ruin it, but prelighting all the cigars is worth the price of admission alone.",
           rating: 3,
-          favorited: false
-        }
-      ]
+          favorited: false,
+        },
+      ],
     };
   },
   computed: {
@@ -163,36 +160,59 @@ export default {
       return (sum / this.reviews.length).toFixed(2);
     },
     numberOfOneStarReviews() {
-        // call a method so that we can return the number of 1 star reviews.
-        return 0;
+      // call a method so that we can return the number of 1 star reviews.
+      return this.numberOfReviews(1);
     },
     numberOfTwoStarReviews() {
-        // call a method so that we can return the number of 2 star reviews.
-        return 0;
+      // call a method so that we can return the number of 2 star reviews.
+      return this.numberOfReviews(2);
     },
     numberOfThreeStarReviews() {
-        // call a method so that we can return the number of 3 star reviews.   
-        return 0;
+      // call a method so that we can return the number of 3 star reviews.
+      return this.numberOfReviews(3);
     },
     numberOfFourStarReviews() {
-        // call a method so that we can return the number of 4 star reviews.
-        return 0;
-      
+      // call a method so that we can return the number of 4 star reviews.
+      return this.numberOfReviews(4);
     },
     numberOfFiveStarReviews() {
-        // call a method so that we can return the number of 5 star reviews.
-          return 0;    
+      // call a method so that we can return the number of 5 star reviews.
+      return this.numberOfReviews(5);
     },
     filteredReviews() {
-      return this.reviews.filter(review => {
+      return this.reviews.filter((review) => {
         return this.filter === 0 ? true : this.filter === review.rating;
       });
-    }
+    },
   },
   methods: {
-  // Methods go here:
+    // Methods go here:
+    resetForm(){
+        this.newReview={};
+        this.showForm= false;
 
-  }
+
+
+    },
+
+
+
+
+    numberOfReviews(numOfStars) {
+      let currentCount = 0;
+
+      this.reviews.forEach((review) => {
+        if (review.rating === numOfStars) {
+          currentCount++;
+        }
+      });
+      return currentCount;
+    },
+    addNewReview(){
+      this.reviews.unshift(this.newReview);
+      this.resetForm();
+    }
+  },
 };
 </script>
 
@@ -261,7 +281,8 @@ div.form-element {
 div.form-element > label {
   display: block;
 }
-div.form-element > input, div.form-element > select {
+div.form-element > input,
+div.form-element > select {
   height: 30px;
   width: 300px;
 }
@@ -269,10 +290,10 @@ div.form-element > textarea {
   height: 60px;
   width: 300px;
 }
-form > input[type=button] {
+form > input[type="button"] {
   width: 100px;
 }
-form > input[type=submit] {
+form > input[type="submit"] {
   width: 100px;
   margin-right: 10px;
 }
