@@ -206,3 +206,7 @@ Passcode: Ht1W+pi*
 3-12 VUE Event Handling:
 https://techelevator.zoom.us/rec/share/211vLAczeiBhE9SjBciOi0h8e6psvkJCgqtw5kAOLl4m5HSusOQ4S_ly8swqsEo.7y06OeHbbjHfC9qH 
 Passcode: fF&bR2je
+
+3-13 VUE Component Communication:
+https://techelevator.zoom.us/rec/share/qUdwBjC5NHGn1uq1SlfLbXOiAZGRuClimkGZZjY6hPm0jumIqXVF3trfVlJ8B4BE.Rh4KAjF-DFwCKn4s 
+Passcode: yQA^$g6?
