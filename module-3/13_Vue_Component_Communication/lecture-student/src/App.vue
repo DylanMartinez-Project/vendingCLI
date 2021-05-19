@@ -5,6 +5,11 @@
     <div class="well-display">
       <average-summary />
       <!--1. Insert star summary components, remember to pass in prop values-->
+      <StarSummary rating='1' />
+      <StarSummary rating='2' />
+      <StarSummary rating='3' />
+      <StarSummary rating='4' />
+      <StarSummary rating='5' />
     </div>
     <add-review />
     <review-table />
@@ -15,13 +20,15 @@
 import AverageSummary from "./components/AverageSummary.vue";
 import AddReview from "./components/AddReview.vue";
 import ReviewTable from "./components/ReviewTable.vue";
+import StarSummary from "./components/StarSummary.vue";
 
 export default {
   name: "app",
   components: {
     AverageSummary,
     AddReview,
-    ReviewTable
+    ReviewTable,
+    StarSummary
   }
 };
 </script>

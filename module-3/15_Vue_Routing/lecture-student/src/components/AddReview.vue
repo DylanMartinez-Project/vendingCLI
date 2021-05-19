@@ -49,6 +49,23 @@ export default {
     addNewReview() {
       // Retrieve the id from the path, use it to set the id property for newReview
       // and send that to the state.
+      const productID= this.$route.params.id;
+      this.newReview.productID= productID;
+
+      this.$store.commit("ADD_REVIEW", this.newReview);
+      this.$router.push(
+        {
+          name: "product-detail",
+          params: {
+            id: productID
+          }
+        }
+
+
+
+
+
+      );
 
 
       // Send the visitor back to the product page to see the new review

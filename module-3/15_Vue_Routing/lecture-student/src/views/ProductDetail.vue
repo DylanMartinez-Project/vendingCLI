@@ -4,6 +4,10 @@
     <p class="description">{{ product.description }}</p>
     <div class="actions">
     <!--Insert the 2 router links-->
+    <router-link v-bind:to="{name: 'products'}" > back to products </router-link>
+    <router-link v-bind:to="{name: 'add-review', params: {id: product.id}} " > Add review </router-link>
+
+
     </div>
     <div class="well-display">
       <average-summary />
@@ -46,6 +50,9 @@ export default {
   created() {
 
     // Retrieve the id from the path, then pass it to the store:
+
+    const activeProductID = this.$route.params.id;
+    this.$store.commit("SET_ACTIVE_PRODUCT", activeProductID);
 
   }
 };

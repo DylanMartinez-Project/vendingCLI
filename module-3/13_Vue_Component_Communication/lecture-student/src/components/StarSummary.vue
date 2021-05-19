@@ -12,13 +12,30 @@ export default {
   methods: {
     updateFilter() {
         // Call the mutator
+        this.$store.commit("UPDATE_FILTER", parseInt(this.rating));
+        console.log(this.$store.state.filter)
     }
   },
   computed: {
     numberOfReviews() {
 
+
+        const reviews = this.$store.state.reviews;
+        let total = 0;
+        reviews.forEach(
+            (review) => {
+              if(review.rating=== parseInt( this.rating)){
+                total++;
+              }
+             
+            }
+
+
+        );
+
+
         // Extract data from the store and summarize the number of reviews
-        return 0;
+         return total;
     }
   }
 };

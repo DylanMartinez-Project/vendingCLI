@@ -46,6 +46,14 @@ export default new Vuex.Store({
   mutations: {
     // 2. Define all mutators
 
+    UPDATE_FILTER(state, filter){
+      state.filter = filter;
+    },
+
+    ADD_REVIEW(state, review){
+      state.reviews.unshift(review);
+    }
+
   },
   actions: {
   },

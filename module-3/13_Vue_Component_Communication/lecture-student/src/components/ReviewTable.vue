@@ -3,7 +3,7 @@
     <thead>
       <tr>
         <th>Title</th>
-        <th>Reviewer</th>
+        <th>Reviewer</th>./
         <th>Review</th>
         <th>Rating</th>
         <th>Favorited</th>
@@ -33,7 +33,18 @@ export default {
   computed: {
     filteredReviews() {
       // retrieve and filter from state.
-        return [];
+
+      if(this.$store.state.filter===0){
+
+        return this.$store.state.reviews;
+    }
+      let resultsArr = this.$store.state.reviews.filter(
+        (review) => {
+          return review.rating === this.$store.state.filter;
+        }
+
+      );
+      return resultsArr;
     }
   }
 };
