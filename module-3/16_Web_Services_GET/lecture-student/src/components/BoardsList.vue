@@ -33,6 +33,15 @@ export default {
   created() {
 
     // Call API, turn off loading animation
+    boardsService.getBoards().then(
+      (response) => {
+        this.boards = response.data;
+        this.isLoading = false;
+      }
+
+
+
+    );
     
   }
 };

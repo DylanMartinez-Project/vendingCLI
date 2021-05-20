@@ -6,13 +6,28 @@
   </div>
 </template>
 
+
+
 <script>
+
+import topicService from '../services/TopicService.js';
+
 export default {
   name: 'topic-list',
   data() {
     return {
       topics: []
     }
+  },
+  created(){
+    topicService.getTopics().then(
+      (response) => {
+        this.topics = response.data;
+      }
+
+
+    );
+
   }
 }
 </script>

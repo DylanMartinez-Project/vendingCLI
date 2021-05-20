@@ -46,6 +46,13 @@ export default {
   created() {
 
       // Call API Service 
+      boardsService.getCards(this.$route.params.id).then(
+        (response) => {
+          this.title = response.data.title;
+          this.cards = response.data.cards;
+          this.isLoading= false;
+        }
+      )
       
   },
   computed: {

@@ -20,6 +20,7 @@
 <script>
 import boardsService from '../services/BoardService';
 import CommentsList from '@/components/CommentsList';
+import BoardService from '../services/BoardService';
 
 export default {
   name: 'card-detail',
@@ -40,6 +41,17 @@ export default {
   created() {
 
       // Call API Service
+      boardsService.getCard(this.$route.params.boardID, this.$route.params.cardID).then(
+        (response) => {
+          this.card = response;
+          this.isLoading= false;
+
+        }
+
+
+
+
+      );
 
   }
 };
