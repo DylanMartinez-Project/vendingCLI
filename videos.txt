@@ -218,3 +218,7 @@ Passcode: J.FC9+XS
 3-15 VUE Routes:
 https://techelevator.zoom.us/rec/share/ieBJjw5PqF7evkJduTh6QCZKyRvdfk0DIll2pw0SVm6ao4-doqcxrqr_8_EoKt_P.8irUdwMSmSFVyUPL 
 Passcode: !wYDj5JP
+
+3-16 VUE Consuming APIs Part 1:
+https://techelevator.zoom.us/rec/share/jZF2Z9iGr6OrIFgn_OyqAlUiDdSTfkXChsJTmfCV9w2Iupt94DEOGjvWRgvV9gpK.1ymnL5Jj1gb0Q0W5 
+Passcode: A5g59@8z
