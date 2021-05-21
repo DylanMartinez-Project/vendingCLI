@@ -56,6 +56,17 @@ export default {
     },
     deleteCard() {
         // 3. Call Service to delete card.
+        if(confirm("really delete?")){
+          boardsService.deleteCard(this.card.cardID).then(
+            (response) => {
+            if(response.status == 200){
+              alert('deleted');
+              this.$router.push(`/board/${this.card.boardID}`)
+            }
+            }
+          );
+
+        }
     },
   },
   created() {

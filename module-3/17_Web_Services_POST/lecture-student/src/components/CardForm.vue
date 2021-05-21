@@ -29,8 +29,8 @@
 </template>
 
 <script>
-// import boardsService from "../services/BoardService";
-// import moment from "moment";
+import boardsService from "../services/BoardService";
+import moment from "moment";
 
 export default {
   name: "card-form",
@@ -56,7 +56,39 @@ export default {
   methods: {
     submitForm() {
         // 2. Call service to add a new card
-        
+        const newCard = {
+          boardID: this.$route.params.boardID,
+          title: this.card.title,
+          description: this.card.description,
+          status: this.card.status,
+          tag: this.card.tag,
+          avatar: "https://randomuser.me/api/portraits/lego/1.jpg",
+        date: moment().format("MMM Do YYYY")
+
+
+
+
+        };
+        boardsService.addCard(newCard).then(
+            (response) => {
+              if(response.status ===201) {
+                  this.$router.push(`/board/${newCard.boardID}`);
+
+              }
+            }
+
+
+
+        ).catch(
+          (error) => {
+            console.log(error);
+          }
+        );
+
+
+
+
+
     },
     cancelForm() {
       this.$router.push(`/board/${this.$route.params.boardID}`);

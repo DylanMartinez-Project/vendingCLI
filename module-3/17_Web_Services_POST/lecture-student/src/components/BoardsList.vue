@@ -59,9 +59,29 @@ export default {
       });
     },
     saveNewBoard() {
+        this.isLoading = true;
+        boardsService.addBoard().then(
+          (response) => {
 
+            if(response.status=== 201){
+this.retrieveBoards();
+            this.showAddBoard = false;
+            this.newBoard = {
+              title: '',
+              backgroundColor : this.randomBackgroundColor()
+            }
+
+
+
+          }
+            }
+            
+
+
+
+        );
       // 1. Call BoardService and add the new board.
-      
+    
     },
     randomBackgroundColor() {
       return "#" + this.generateHexCode();

@@ -7,6 +7,12 @@ const http = axios.create({
   export default {
       getTopics() {
           return http.get('/topics')
+      },
+
+      getTopic(id){
+          return http.get(`/topics/${id}`).then(
+              
+          );
       }
 
 
